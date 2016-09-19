@@ -153,7 +153,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/code-demo/" style="font-size: 10px;">code demo</a>
+                        <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/code-demo/" style="font-size: 20px;">code demo</a>
                     </div>
                 </section>
                 
@@ -251,11 +251,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-angular学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/17/hello-world-2/" class="article-date">
-      <time datetime="2016-09-16T16:11:27.000Z" itemprop="datePublished">2016-09-17</time>
+      <a href="/2016/09/19/angular学习笔记/" class="article-date">
+      <time datetime="2016-09-19T08:02:30.000Z" itemprop="datePublished">2016-09-19</time>
 </a>
     </div>
   
@@ -268,7 +268,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/17/hello-world-2/">demo2</a>
+      <a class="article-title" href="/2016/09/19/angular学习笔记/">Mac上终端用户名显示bogon的解决办法</a>
     </h1>
   
 
@@ -278,9 +278,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p><a href="http://github.com/">Github</a><br><img src="http://ww4.sinaimg.cn/bmiddle/aa397b7fjw1dzplsgpdw5j.jpg" alt="测试图片"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hello_world</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">static</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        System.out.println(“<span class="number">123</span>”);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>– More –<br>
-          
+        <h2 id="笔记1"><a href="#笔记1" class="headerlink" title="笔记1"></a>笔记1</h2><p>要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=<span class="string">"MyController"</span>&gt; </div><div class="line">    &#123;&#123; person.name &#125;&#125; </div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -288,19 +287,78 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/demo/">demo</a>
+    <a class="article-category-link" href="/categories/Web/">Web</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-demo/">code demo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
     </div>
 
       
-        <p class="article-more-link">
-          <a  href="/2016/09/17/hello-world-2/#more">大航海 >></a>
-        </p>
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Mac上终端用户名显示bogon的解决办法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/" class="article-date">
+      <time datetime="2016-09-17T10:38:02.000Z" itemprop="datePublished">2016-09-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/">Mac上终端用户名显示bogon的解决办法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>笔者最近才开始使用Mac OS，发现终端上的用户名始终是显示bogon，在网上找了几个解决办法，但是都行不通。后来在github上找到答案，只要在关闭WIFI的情况下在终端输入以下指令，然后重启终端即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">sudo</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Mac/">Mac</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -366,6 +424,79 @@
       
         <p class="article-more-link">
           <a  href="/2016/09/17/hello-world-1/#more">大航海 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/17/hello-world-2/" class="article-date">
+      <time datetime="2016-09-16T16:11:27.000Z" itemprop="datePublished">2016-09-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/17/hello-world-2/">demo2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>文字超链：Inline方式<br>Tooltips可省略<br><a href="http://github.com/">Github</a></p>
+<p>图片超链：多个感叹号，Tooltips可省略，要设置大小只能借助HTML标记<br><img src="http://ww4.sinaimg.cn/bmiddle/aa397b7fjw1dzplsgpdw5j.jpg" alt="测试图片" title="测试图片"></p>
+<p>索引超链：Reference方式 索引，1 2可以是任意字符<br><a href="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1">不如</a><br><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png" alt="GitHub Octocat"></p>
+<p>显示链接中带括号的图片<br><img src="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1" alt=""></p>
+<p>自动链接 尖括号<br><a href="http://ibruce.info">http://ibruce.info</a></p>
+<a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x62;&#x75;&#x2e;&#114;&#117;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#x62;&#x75;&#x2e;&#114;&#117;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>– More –<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/demo/">demo</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-demo/">code demo</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/09/17/hello-world-2/#more">大航海 >></a>
         </p>
       
       <div class="clearfix"></div>
