@@ -5,16 +5,31 @@
   
   <title>Angular学习笔记 | Hexo_Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="笔记1要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：123&amp;lt;div ng-controller=&quot;MyController&quot;&amp;gt;     &amp;#123;&amp;#123; person.name &amp;#125;&amp;#125; &amp;lt;/div&amp;gt;">
+  <meta name="description" content="概述angular是一个基于JavaScript的mvvm框架，也即Model-View-View-Model框架，它的几大特色有：
+
+双向数据绑定
+
+
+笔记11.1 要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：123&amp;lt;div ng-controller=&quot;MyController&quot;&amp;gt;     &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular学习笔记">
 <meta property="og:url" content="http://yoursite.com/2016/09/19/angular学习笔记/index.html">
 <meta property="og:site_name" content="Hexo_Demo">
-<meta property="og:description" content="笔记1要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：123&amp;lt;div ng-controller=&quot;MyController&quot;&amp;gt;     &amp;#123;&amp;#123; person.name &amp;#125;&amp;#125; &amp;lt;/div&amp;gt;">
-<meta property="og:updated_time" content="2016-09-19T08:08:18.000Z">
+<meta property="og:description" content="概述angular是一个基于JavaScript的mvvm框架，也即Model-View-View-Model框架，它的几大特色有：
+
+双向数据绑定
+
+
+笔记11.1 要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：123&amp;lt;div ng-controller=&quot;MyController&quot;&amp;gt;     &amp;">
+<meta property="og:updated_time" content="2016-09-20T03:46:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular学习笔记">
-<meta name="twitter:description" content="笔记1要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：123&amp;lt;div ng-controller=&quot;MyController&quot;&amp;gt;     &amp;#123;&amp;#123; person.name &amp;#125;&amp;#125; &amp;lt;/div&amp;gt;">
+<meta name="twitter:description" content="概述angular是一个基于JavaScript的mvvm框架，也即Model-View-View-Model框架，它的几大特色有：
+
+双向数据绑定
+
+
+笔记11.1 要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：123&amp;lt;div ng-controller=&quot;MyController&quot;&amp;gt;     &amp;">
   
     <link rel="alternative" href="/atom.xml" title="Hexo_Demo" type="application/atom+xml">
   
@@ -289,7 +304,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="笔记1"><a href="#笔记1" class="headerlink" title="笔记1"></a>笔记1</h2><p>要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=<span class="string">"MyController"</span>&gt; </div><div class="line">    &#123;&#123; person.name &#125;&#125; </div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>angular是一个基于JavaScript的mvvm框架，也即Model-View-View-Model框架，它的几大特色有：</p>
+<ul>
+<li>双向数据绑定</li>
+<li></li>
+</ul>
+<h4 id="笔记1"><a href="#笔记1" class="headerlink" title="笔记1"></a>笔记1</h4><p>1.1 要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=<span class="string">"MyController"</span>&gt; </div><div class="line">    &#123;&#123; person.name &#125;&#125; </div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
+<p>1.2 Services都是单例的，就是说在一个应用中，每一个Serice对象只会被实例化一次,创建一个service就是简单的返回一个函数，这个函数返回一个对象。这个对象是在创建应用实例的时候创建的（记住，这个对象是单例对象）</p>
 
       
     </div>
@@ -301,7 +322,7 @@
         <p><span>本文标题:</span><a href="/2016/09/19/angular学习笔记/">Angular学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 NewDynasty 的个人博客">NewDynasty</a></p>
         <p><span>发布时间:</span>2016年09月19日 - 16时02分</p>
-        <p><span>最后更新:</span>2016年09月19日 - 16时08分</p>
+        <p><span>最后更新:</span>2016年09月20日 - 11时46分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/19/angular学习笔记/" title="Angular学习笔记">http://yoursite.com/2016/09/19/angular学习笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/19/angular学习笔记/　　作者: NewDynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -330,7 +351,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#笔记1"><span class="toc-number">1.</span> <span class="toc-text">笔记1</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#笔记1"><span class="toc-number">1.0.1.</span> <span class="toc-text">笔记1</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 

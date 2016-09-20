@@ -278,7 +278,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="笔记1"><a href="#笔记1" class="headerlink" title="笔记1"></a>笔记1</h2><p>要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=<span class="string">"MyController"</span>&gt; </div><div class="line">    &#123;&#123; person.name &#125;&#125; </div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>angular是一个基于JavaScript的mvvm框架，也即Model-View-View-Model框架，它的几大特色有：</p>
+<ul>
+<li>双向数据绑定</li>
+<li></li>
+</ul>
+<h4 id="笔记1"><a href="#笔记1" class="headerlink" title="笔记1"></a>笔记1</h4><p>1.1 要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=<span class="string">"MyController"</span>&gt; </div><div class="line">    &#123;&#123; person.name &#125;&#125; </div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
+<p>1.2 Services都是单例的，就是说在一个应用中，每一个Serice对象只会被实例化一次,创建一个service就是简单的返回一个函数，这个函数返回一个对象。这个对象是在创建应用实例的时候创建的（记住，这个对象是单例对象）</p>
 
       
     </div>
