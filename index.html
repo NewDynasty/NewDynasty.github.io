@@ -36,6 +36,7 @@
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style2_24.css">
   <script>
       var yiliaConfig = {
           fancybox: true,
@@ -417,7 +418,7 @@
       
           
         <p>笔者最近才开始使用Mac OS，发现终端上的用户名始终是显示bogon，在网上找了几个解决办法，但是都行不通。后来在github上找到答案，只要在关闭WIFI的情况下在终端输入以下指令，然后重启终端即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">sudo</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">sudo hostname 您的主机名</div><div class="line">sudo scutil --set LocalHostName $(hostname)</div><div class="line">sudo scutil --set HostName $(hostname)</div></pre></td></tr></table></figure>
 
       
     </div>

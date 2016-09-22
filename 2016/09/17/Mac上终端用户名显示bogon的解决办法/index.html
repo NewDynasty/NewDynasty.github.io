@@ -6,18 +6,18 @@
   <title>Mac上终端用户名显示bogon的解决办法 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="笔者最近才开始使用Mac OS，发现终端上的用户名始终是显示bogon，在网上找了几个解决办法，但是都行不通。后来在github上找到答案，只要在关闭WIFI的情况下在终端输入以下指令，然后重启终端即可。
-12sudo">
+1234sudo hostname 您的主机名sudo scutil --set LocalHostName $(hostname)sudo scutil --set HostName $(ho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac上终端用户名显示bogon的解决办法">
 <meta property="og:url" content="http://yoursite.com/2016/09/17/Mac上终端用户名显示bogon的解决办法/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
 <meta property="og:description" content="笔者最近才开始使用Mac OS，发现终端上的用户名始终是显示bogon，在网上找了几个解决办法，但是都行不通。后来在github上找到答案，只要在关闭WIFI的情况下在终端输入以下指令，然后重启终端即可。
-12sudo">
-<meta property="og:updated_time" content="2016-09-17T10:43:20.000Z">
+1234sudo hostname 您的主机名sudo scutil --set LocalHostName $(hostname)sudo scutil --set HostName $(ho">
+<meta property="og:updated_time" content="2016-09-22T16:36:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac上终端用户名显示bogon的解决办法">
 <meta name="twitter:description" content="笔者最近才开始使用Mac OS，发现终端上的用户名始终是显示bogon，在网上找了几个解决办法，但是都行不通。后来在github上找到答案，只要在关闭WIFI的情况下在终端输入以下指令，然后重启终端即可。
-12sudo">
+1234sudo hostname 您的主机名sudo scutil --set LocalHostName $(hostname)sudo scutil --set HostName $(ho">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -37,6 +37,7 @@
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style2_24.css">
   <script>
       var yiliaConfig = {
           fancybox: true,
@@ -257,7 +258,7 @@
       
           
         <p>笔者最近才开始使用Mac OS，发现终端上的用户名始终是显示bogon，在网上找了几个解决办法，但是都行不通。后来在github上找到答案，只要在关闭WIFI的情况下在终端输入以下指令，然后重启终端即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">sudo</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">sudo hostname 您的主机名</div><div class="line">sudo scutil --set LocalHostName $(hostname)</div><div class="line">sudo scutil --set HostName $(hostname)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -269,7 +270,7 @@
         <p><span>本文标题:</span><a href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/">Mac上终端用户名显示bogon的解决办法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
         <p><span>发布时间:</span>2016年09月17日 - 18时38分</p>
-        <p><span>最后更新:</span>2016年09月17日 - 18时43分</p>
+        <p><span>最后更新:</span>2016年09月23日 - 00时36分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/" title="Mac上终端用户名显示bogon的解决办法">http://yoursite.com/2016/09/17/Mac上终端用户名显示bogon的解决办法/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/17/Mac上终端用户名显示bogon的解决办法/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
