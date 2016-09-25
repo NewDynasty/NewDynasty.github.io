@@ -136,7 +136,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/code-demo/" style="font-size: 20px;">code demo</a>
+                        <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/code-demo/" style="font-size: 20px;">code demo</a>
                     </div>
                 </section>
                 
@@ -219,7 +219,77 @@
     <article id="post-angular学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/19/angular学习笔记/" class="article-date">
+      <a href="/2016/09/24/angular学习笔记/" class="article-date">
+      <time datetime="2016-09-24T08:02:30.000Z" itemprop="datePublished">2016-09-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/24/angular学习笔记/">Angular学习笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>angular是一个MVVM框架，有以下特点：</p>
+<ul>
+<li>双向数据绑定</li>
+<li>依赖注入</li>
+<li>声明式UI</li>
+<li>可扩展的自定义指令、服务以及过滤器</li>
+<li>路由管理</li>
+</ul>
+<p>注意：如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作我有这样一个DOM，我想让它做XX，新一代前端开发思维 以AngularJS为代表 以Data为中心 聚焦于数据的变更 MVW = Model + View + WhatEver。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-mac命令笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/19/mac命令笔记/" class="article-date">
       <time datetime="2016-09-19T08:02:30.000Z" itemprop="datePublished">2016-09-19</time>
 </a>
     </div>
@@ -233,7 +303,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/19/angular学习笔记/">Angular学习笔记</a>
+      <a class="article-title" href="/2016/09/19/mac命令笔记/">Angular学习笔记</a>
     </h1>
   
 
@@ -243,13 +313,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>angular是一个基于JavaScript的mvvm框架，也即Model-View-View-Model框架，它的几大特色有：</p>
-<ul>
-<li>双向数据绑定</li>
-<li></li>
-</ul>
-<h4 id="笔记1"><a href="#笔记1" class="headerlink" title="笔记1"></a>笔记1</h4><p>1.1 要明确创建一个$scope 对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=<span class="string">"MyController"</span>&gt; </div><div class="line">    &#123;&#123; person.name &#125;&#125; </div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
-<p>1.2 Services都是单例的，就是说在一个应用中，每一个Serice对象只会被实例化一次,创建一个service就是简单的返回一个函数，这个函数返回一个对象。这个对象是在创建应用实例的时候创建的（记住，这个对象是单例对象）</p>
+        <p>lsof -i :6377 查看6377端口被什么进程占用<br>COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME<br>redis-ser 10186 dynasty    4u  IPv6 0xc2d949d2fc8eee11      0t0  TCP <em>:6377 (LISTEN)<br>redis-ser 10186 dynasty    5u  IPv4 0xc2d949d2fc259881      0t0  TCP </em>:6377 (LISTEN)</p>
+<p>然后使用kill pid命令关闭指定进程<br>kill 10186</p>
 
       
     </div>
