@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/09/19/Mac命令笔记/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
 <meta property="og:description" content="1.查看指定端口被什么进程占用1234lsof -i :6377COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAMEredis-ser 10186 dynasty    4u  IPv6 0xc2d949d2fc8eee11      0t0  TCP *:6377 (LISTEN)redis-ser 1">
-<meta property="og:updated_time" content="2016-09-27T07:55:19.000Z">
+<meta property="og:updated_time" content="2016-09-27T07:56:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac命令">
 <meta name="twitter:description" content="1.查看指定端口被什么进程占用1234lsof -i :6377COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAMEredis-ser 10186 dynasty    4u  IPv6 0xc2d949d2fc8eee11      0t0  TCP *:6377 (LISTEN)redis-ser 1">
@@ -256,6 +256,7 @@
           
         <h2 id="1-查看指定端口被什么进程占用"><a href="#1-查看指定端口被什么进程占用" class="headerlink" title="1.查看指定端口被什么进程占用"></a>1.查看指定端口被什么进程占用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">lsof -i :6377</div><div class="line">COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME</div><div class="line">redis-ser 10186 dynasty    4u  IPv6 0xc2d949d2<span class="built_in">fc</span>8eee11      0t0  TCP *:6377 (LISTEN)</div><div class="line">redis-ser 10186 dynasty    5u  IPv4 0xc2d949d2<span class="built_in">fc</span>259881      0t0  TCP *:6377 (LISTEN)</div></pre></td></tr></table></figure>
 <p>然后使用kill pid命令关闭指定进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">kill</span> 10186</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>##2.终端光标移动快捷键</p>
 <p>在Mac系统中并没有Home、End等键，所以在使用时并不是特别的顺手，但是有几个键位组合可以使Terminal的操作更加灵活方便。</p>
 <ul>
@@ -278,7 +279,7 @@
         <p><span>本文标题:</span><a href="/2016/09/19/Mac命令笔记/">Mac命令</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
         <p><span>发布时间:</span>2016年09月19日 - 16时02分</p>
-        <p><span>最后更新:</span>2016年09月27日 - 15时55分</p>
+        <p><span>最后更新:</span>2016年09月27日 - 15时56分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/19/Mac命令笔记/" title="Mac命令">http://yoursite.com/2016/09/19/Mac命令笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/19/Mac命令笔记/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -398,7 +399,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/angular学习笔记/">Angular学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/19/Mac命令笔记/">Mac命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/">Mac终端用户名显示bogon的解决办法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/hello-world-1/">demo1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/hello-world-2/">demo2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/16/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/angular学习笔记/">Angular学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/19/Mac命令笔记/">Mac命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/">Mac终端用户名显示bogon的解决办法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/hello-world-1/">demo1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/hello-world-2/">demo2</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
