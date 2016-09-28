@@ -5,40 +5,34 @@
   
   <title>Angular学习笔记04-ui.grid使用心得 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述
-UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。
+  <meta name="description" content="需求需求是在ui.grid生成的表格上加上这样一个功能：点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。
+那么目标分成两步：
 
-其核心模块有以下功能：
+首先需要为表格添加行点击监听事件以及触发函数
+其次需要为触发函数实现弹出窗口功能
 
-虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 
-绑定单元格到复杂的属性以及函数
-列排序可用三种状态：顺序，倒序，无排序
-列">
+为ui.grid添加行点击监听事件以及触发函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular学习笔记04-ui.grid使用心得">
 <meta property="og:url" content="http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="概述
-UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。
+<meta property="og:description" content="需求需求是在ui.grid生成的表格上加上这样一个功能：点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。
+那么目标分成两步：
 
-其核心模块有以下功能：
+首先需要为表格添加行点击监听事件以及触发函数
+其次需要为触发函数实现弹出窗口功能
 
-虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 
-绑定单元格到复杂的属性以及函数
-列排序可用三种状态：顺序，倒序，无排序
-列">
-<meta property="og:updated_time" content="2016-09-28T16:23:46.000Z">
+为ui.grid添加行点击监听事件以及触发函数">
+<meta property="og:updated_time" content="2016-09-28T16:24:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular学习笔记04-ui.grid使用心得">
-<meta name="twitter:description" content="概述
-UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。
+<meta name="twitter:description" content="需求需求是在ui.grid生成的表格上加上这样一个功能：点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。
+那么目标分成两步：
 
-其核心模块有以下功能：
+首先需要为表格添加行点击监听事件以及触发函数
+其次需要为触发函数实现弹出窗口功能
 
-虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 
-绑定单元格到复杂的属性以及函数
-列排序可用三种状态：顺序，倒序，无排序
-列">
+为ui.grid添加行点击监听事件以及触发函数">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -278,20 +272,7 @@ UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><blockquote>
-<p>UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。</p>
-</blockquote>
-<p>其核心模块有以下功能：</p>
-<ul>
-<li>虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 </li>
-<li>绑定单元格到复杂的属性以及函数</li>
-<li>列排序可用三种状态：顺序，倒序，无排序</li>
-<li>列过滤</li>
-<li>改变列头以及用模板填充单元格的能力</li>
-<li>i18nService 允许标签翻译</li>
-</ul>
-<hr>
-<p>需求是在ui.grid生成的表格上加上这样一个功能：<strong>点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。</strong></p>
+        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>需求是在ui.grid生成的表格上加上这样一个功能：<strong>点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。</strong></p>
 <p>那么目标分成两步：</p>
 <ol>
 <li>首先需要为表格添加行点击监听事件以及触发函数</li>
@@ -308,7 +289,7 @@ UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以
         <p><span>本文标题:</span><a href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/">Angular学习笔记04-ui.grid使用心得</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
         <p><span>发布时间:</span>2016年09月28日 - 23时47分</p>
-        <p><span>最后更新:</span>2016年09月29日 - 00时23分</p>
+        <p><span>最后更新:</span>2016年09月29日 - 00时24分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/" title="Angular学习笔记04-ui.grid使用心得">http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -346,7 +327,7 @@ UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为ui-grid添加行点击监听事件以及触发函数"><span class="toc-number">2.</span> <span class="toc-text">为ui.grid添加行点击监听事件以及触发函数</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#需求"><span class="toc-number">1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为ui-grid添加行点击监听事件以及触发函数"><span class="toc-number">2.</span> <span class="toc-text">为ui.grid添加行点击监听事件以及触发函数</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
