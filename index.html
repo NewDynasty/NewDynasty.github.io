@@ -244,7 +244,7 @@
       
           
               <blockquote>
-<p>转载自:<a href="http://www.cnblogs.com/snandy/archive/2011/03/04/1970162.html">判断JS对象是否拥有某属性</a></p>
+<p>转载自Snandy:<a href="http://www.cnblogs.com/snandy/archive/2011/03/04/1970162.html"> 判断JS对象是否拥有某属性</a></p>
 </blockquote>
 <h1 id="判断JS对象是否拥有某属性"><a href="#判断JS对象是否拥有某属性" class="headerlink" title="判断JS对象是否拥有某属性"></a>判断JS对象是否拥有某属性</h1><p>两种方式，但稍有区别</p>
 <h2 id="in-运算符"><a href="#in-运算符" class="headerlink" title="in 运算符"></a>in 运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;name:<span class="string">'jack'</span>&#125;;</div><div class="line">alert(<span class="string">'name'</span> <span class="keyword">in</span> obj); <span class="comment">// true</span></div><div class="line">alert(<span class="string">'toString'</span> <span class="keyword">in</span> obj); <span class="comment">// true</span></div></pre></td></tr></table></figure>
@@ -314,7 +314,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="有四种方法可以判断一个元素是否存在于一个数组中"><a href="#有四种方法可以判断一个元素是否存在于一个数组中" class="headerlink" title="有四种方法可以判断一个元素是否存在于一个数组中"></a>有四种方法可以判断一个元素是否存在于一个数组中</h1><h2 id="使用jQuery里自带的-inarray-value-array-函数"><a href="#使用jQuery里自带的-inarray-value-array-函数" class="headerlink" title="使用jQuery里自带的$.inarray(value, array)函数"></a>使用jQuery里自带的$.inarray(value, array)函数</h2><p>确定第一个参数在数组中的位置(如果没有找到则返回 -1 )。</p>
+              <blockquote>
+<p>转载自jumtre:<a href="http://blog.csdn.net/jumtre/article/details/41893779"> JS判断元素是否在数组内</a></p>
+</blockquote>
+<h1 id="有四种方法可以判断一个元素是否存在于一个数组中"><a href="#有四种方法可以判断一个元素是否存在于一个数组中" class="headerlink" title="有四种方法可以判断一个元素是否存在于一个数组中"></a>有四种方法可以判断一个元素是否存在于一个数组中</h1><h2 id="使用jQuery里自带的-inarray-value-array-函数"><a href="#使用jQuery里自带的-inarray-value-array-函数" class="headerlink" title="使用jQuery里自带的$.inarray(value, array)函数"></a>使用jQuery里自带的$.inarray(value, array)函数</h2><p>确定第一个参数在数组中的位置(如果没有找到则返回 -1 )。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">alert($.inArray(<span class="number">1</span>, arr)); <span class="comment">// 0</span></div><div class="line">alert($.inArray(<span class="number">6</span>, arr)); <span class="comment">// -1</span></div></pre></td></tr></table></figure>
           
       
