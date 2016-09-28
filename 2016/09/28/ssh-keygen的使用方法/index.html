@@ -3,45 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Angular学习笔记01-概述 | Dynasty&#39;s blog</title>
+  <title>转载_ssh-keygen的使用方法 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述angular是一个MVVM框架，有以下特点：
+  <meta name="description" content="转载自kongqz: 判断JS对象是否拥有某属性
 
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
+概述
+就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作
+模型分析假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机
 
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
+要达到的目的：A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。
+具体操作流程单向登陆的操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular学习笔记01-概述">
-<meta property="og:url" content="http://yoursite.com/2016/09/24/Angular学习笔记01-概述/index.html">
+<meta property="og:title" content="转载_ssh-keygen的使用方法">
+<meta property="og:url" content="http://yoursite.com/2016/09/28/ssh-keygen的使用方法/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="概述angular是一个MVVM框架，有以下特点：
+<meta property="og:description" content="转载自kongqz: 判断JS对象是否拥有某属性
 
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
+概述
+就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作
+模型分析假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机
 
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
-<meta property="og:updated_time" content="2016-09-27T13:43:23.000Z">
+要达到的目的：A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。
+具体操作流程单向登陆的操作">
+<meta property="og:updated_time" content="2016-09-28T15:44:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular学习笔记01-概述">
-<meta name="twitter:description" content="概述angular是一个MVVM框架，有以下特点：
+<meta name="twitter:title" content="转载_ssh-keygen的使用方法">
+<meta name="twitter:description" content="转载自kongqz: 判断JS对象是否拥有某属性
 
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
+概述
+就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作
+模型分析假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机
 
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
+要达到的目的：A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。
+具体操作流程单向登陆的操作">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -239,11 +233,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Angular学习笔记01-概述" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ssh-keygen的使用方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/24/Angular学习笔记01-概述/" class="article-date">
-      <time datetime="2016-09-24T08:02:30.000Z" itemprop="datePublished">2016-09-24</time>
+      <a href="/2016/09/28/ssh-keygen的使用方法/" class="article-date">
+      <time datetime="2016-09-28T15:32:59.000Z" itemprop="datePublished">2016-09-28</time>
 </a>
     </div>
   
@@ -256,7 +250,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Angular学习笔记01-概述
+      转载_ssh-keygen的使用方法
     </h1>
   
 
@@ -265,13 +259,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -281,17 +275,36 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>angular是一个MVVM框架，有以下特点：</p>
-<ul>
-<li>双向数据绑定</li>
-<li>依赖注入</li>
-<li>声明式UI</li>
-<li>可扩展的自定义指令、服务以及过滤器</li>
-<li>路由管理</li>
-</ul>
-<blockquote>
-<p>如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作我有这样一个DOM，我想让它做XX，新一代前端开发思维 以AngularJS为代表 以Data为中心 聚焦于数据的变更 MVW = Model + View + WhatEver。</p>
+        <blockquote>
+<p>转载自kongqz:<a href="http://blog.csdn.net/kongqz/article/details/6338690" target="_blank" rel="external"> 判断JS对象是否拥有某属性</a></p>
 </blockquote>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ol>
+<li>就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作</li>
+<li>模型分析<br>假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机</li>
+</ol>
+<p>要达到的目的：<br>A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。</p>
+<h1 id="具体操作流程"><a href="#具体操作流程" class="headerlink" title="具体操作流程"></a>具体操作流程</h1><p>单向登陆的操作过程：</p>
+<ol>
+<li>登录 A 机器 </li>
+<li>ssh-keygen -t [rsa|dsa]，将会生成密钥文件和私钥文件 id_rsa，id_rsa.pub或id_dsa，id_dsa.pub</li>
+<li>将 .pub 文件复制到 B 机器的 .ssh 目录， 并 cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys</li>
+<li>大功告成，从 A 机器登录 B 机器的目标账户，不再需要密码了（直接运行 #ssh 192.168.20.60 ）</li>
+</ol>
+<p>双向登陆的操作过程：</p>
+<ol>
+<li>ssh-keygen做密码验证可以使在向对方机器上ssh，scp不用使用密码。具体方法如下:</li>
+<li>两个节点都执行操作：#ssh-keygen -t rsa<br>然后全部回车，采用默认值.</li>
+<li>这样生成了一对密钥，存放在用户目录的~/.ssh下。<br>将公钥考到对方机器的用户目录下 ，并将其复制到~/.ssh/authorized_keys中（操作命令：#cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys ）。</li>
+<li>设置文件和目录权限：设置authorized_keys权限<br>$ chmod 600 authorized_keys<br>设置.ssh目录权限<br>$ chmod 700 -R .ssh</li>
+<li>要保证.ssh和authorized_keys都只有用户自己有写权限。否则验证无效。（今天就是遇到这个问题，找了好久问题所在）其实仔细想想，这样做是为了不会出现系统漏洞。<br>我从20.60去访问20.59的时候会提示如下错误：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">The authenticity of host <span class="string">'192.168.20.59 (192.168.20.59)'</span> can<span class="string">'t be established.  </span></div><div class="line">RSA key fingerprint is 6a:37:c0:e1:09:a4:29:8d:68:d0:ca:21:20:94:be:18.  </div><div class="line">Are you sure you want to continue connecting (yes/no)? yes  </div><div class="line">Warning: Permanently added '192.168.20.59<span class="string">' (RSA) to the list of known hosts.  </span></div><div class="line">root@192.168.20.59's password:   </div><div class="line">Permission denied, please try again.  </div><div class="line">root@192.168.20.59<span class="string">'s password:   </span></div><div class="line">Permission denied, please try again.  </div><div class="line">root@192.168.20.59's password:   </div><div class="line">Permission denied (publickey,gssapi-with-mic,password).</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="总结注意事项"><a href="#总结注意事项" class="headerlink" title="总结注意事项"></a>总结注意事项</h1><ol>
+<li>文件和目录的权限千万别设置成chmod 777，这个权限太大了，不安全，数字签名也不支持。</li>
+<li>生成的rsa/dsa签名的公钥是给对方机器使用的。这个公钥内容还要拷贝到authorized_keys</li>
+<li>linux之间的访问直接 ssh 机器ip</li>
+<li>某个机器生成自己的RSA或者DSA的数字签名，将公钥给目标机器，然后目标机器接收后设定相关权限（公钥和authorized_keys权限），这个目标机就能被生成数字签名的机器无密码访问了</li>
+</ol>
 
       
     </div>
@@ -300,13 +313,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/24/Angular学习笔记01-概述/">Angular学习笔记01-概述</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/28/ssh-keygen的使用方法/">转载_ssh-keygen的使用方法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年09月24日 - 16时02分</p>
-        <p><span>最后更新:</span>2016年09月27日 - 21时43分</p>
+        <p><span>发布时间:</span>2016年09月28日 - 23时32分</p>
+        <p><span>最后更新:</span>2016年09月28日 - 23时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/24/Angular学习笔记01-概述/" title="Angular学习笔记01-概述">http://yoursite.com/2016/09/24/Angular学习笔记01-概述/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/24/Angular学习笔记01-概述/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/28/ssh-keygen的使用方法/" title="转载_ssh-keygen的使用方法">http://yoursite.com/2016/09/28/ssh-keygen的使用方法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/28/ssh-keygen的使用方法/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -319,18 +332,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/09/27/Angular学习笔记02-自定义指令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Angular学习笔记02-自定义指令
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/19/Mac命令笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac命令</div>
+    <a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">转载_Javascript里判断一个对象是否拥有某属性</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -341,7 +345,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#具体操作流程"><span class="toc-number">2.</span> <span class="toc-text">具体操作流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结注意事项"><span class="toc-number">3.</span> <span class="toc-text">总结注意事项</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -377,7 +381,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/24/Angular学习笔记01-概述/" data-title="Angular学习笔记01-概述" data-url="http://yoursite.com/2016/09/24/Angular学习笔记01-概述/"></div>
+    <div class="ds-thread" data-thread-key="2016/09/28/ssh-keygen的使用方法/" data-title="转载_ssh-keygen的使用方法" data-url="http://yoursite.com/2016/09/28/ssh-keygen的使用方法/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -400,13 +404,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/27/Angular学习笔记02-自定义指令/" title="上一篇: Angular学习笔记02-自定义指令">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/19/Mac命令笔记/" title="下一篇: Mac命令">
+            <a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" title="下一篇: 转载_Javascript里判断一个对象是否拥有某属性">
                 <i class="fa fa-angle-right"></i>
             </a>
         
