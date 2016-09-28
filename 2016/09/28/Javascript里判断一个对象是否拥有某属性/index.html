@@ -3,45 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Angular学习笔记01-概述 | Dynasty&#39;s blog</title>
+  <title>Javascript里判断一个对象是否拥有某属性 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述angular是一个MVVM框架，有以下特点：
-
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
-
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
+  <meta name="description" content="判断JS对象是否拥有某属性两种方式，但稍有区别
+in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;name&apos; in obj); // truealert(&apos;toString&apos; in obj); // true
+可看到无论是name，还是原形链上的toString，都能检测到返回true。
+hasOwnProperty 方法123var obj =">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular学习笔记01-概述">
-<meta property="og:url" content="http://yoursite.com/2016/09/24/Angular学习笔记01-概述/index.html">
+<meta property="og:title" content="Javascript里判断一个对象是否拥有某属性">
+<meta property="og:url" content="http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="概述angular是一个MVVM框架，有以下特点：
-
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
-
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
-<meta property="og:updated_time" content="2016-09-27T13:43:23.000Z">
+<meta property="og:description" content="判断JS对象是否拥有某属性两种方式，但稍有区别
+in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;name&apos; in obj); // truealert(&apos;toString&apos; in obj); // true
+可看到无论是name，还是原形链上的toString，都能检测到返回true。
+hasOwnProperty 方法123var obj =">
+<meta property="og:updated_time" content="2016-09-28T15:27:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular学习笔记01-概述">
-<meta name="twitter:description" content="概述angular是一个MVVM框架，有以下特点：
-
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
-
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
+<meta name="twitter:title" content="Javascript里判断一个对象是否拥有某属性">
+<meta name="twitter:description" content="判断JS对象是否拥有某属性两种方式，但稍有区别
+in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;name&apos; in obj); // truealert(&apos;toString&apos; in obj); // true
+可看到无论是name，还是原形链上的toString，都能检测到返回true。
+hasOwnProperty 方法123var obj =">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -239,11 +221,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Angular学习笔记01-概述" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Javascript里判断一个对象是否拥有某属性" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/24/Angular学习笔记01-概述/" class="article-date">
-      <time datetime="2016-09-24T08:02:30.000Z" itemprop="datePublished">2016-09-24</time>
+      <a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" class="article-date">
+      <time datetime="2016-09-28T15:18:07.000Z" itemprop="datePublished">2016-09-28</time>
 </a>
     </div>
   
@@ -256,7 +238,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Angular学习笔记01-概述
+      Javascript里判断一个对象是否拥有某属性
     </h1>
   
 
@@ -271,7 +253,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -281,17 +263,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>angular是一个MVVM框架，有以下特点：</p>
-<ul>
-<li>双向数据绑定</li>
-<li>依赖注入</li>
-<li>声明式UI</li>
-<li>可扩展的自定义指令、服务以及过滤器</li>
-<li>路由管理</li>
-</ul>
-<blockquote>
-<p>如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作我有这样一个DOM，我想让它做XX，新一代前端开发思维 以AngularJS为代表 以Data为中心 聚焦于数据的变更 MVW = Model + View + WhatEver。</p>
-</blockquote>
+        <h1 id="判断JS对象是否拥有某属性"><a href="#判断JS对象是否拥有某属性" class="headerlink" title="判断JS对象是否拥有某属性"></a>判断JS对象是否拥有某属性</h1><p>两种方式，但稍有区别</p>
+<h2 id="in-运算符"><a href="#in-运算符" class="headerlink" title="in 运算符"></a>in 运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;name:<span class="string">'jack'</span>&#125;;</div><div class="line">alert(<span class="string">'name'</span> <span class="keyword">in</span> obj); <span class="comment">// true</span></div><div class="line">alert(<span class="string">'toString'</span> <span class="keyword">in</span> obj); <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<p>可看到无论是name，还是原形链上的toString，都能检测到返回true。</p>
+<h2 id="hasOwnProperty-方法"><a href="#hasOwnProperty-方法" class="headerlink" title="hasOwnProperty 方法"></a>hasOwnProperty 方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;name:<span class="string">'jack'</span>&#125;;</div><div class="line">    alert(obj.hasOwnProperty(<span class="string">'name'</span>)); <span class="comment">// --&gt; true</span></div><div class="line">    alert(obj.hasOwnProperty(<span class="string">'toString'</span>)); <span class="comment">// --&gt; false</span></div></pre></td></tr></table></figure>
+<p>原型链上继承过来的属性无法通过hasOwnProperty检测到，返回false。</p>
+<p>需注意的是，虽然in能检测到原型链的属性，但for in通常却不行。</p>
+<p>当然重写原型后for in在IE9/Firefox/Safari/Chrome/Opera下是可见的。</p>
 
       
     </div>
@@ -300,13 +278,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/24/Angular学习笔记01-概述/">Angular学习笔记01-概述</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/">Javascript里判断一个对象是否拥有某属性</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年09月24日 - 16时02分</p>
-        <p><span>最后更新:</span>2016年09月27日 - 21时43分</p>
+        <p><span>发布时间:</span>2016年09月28日 - 23时18分</p>
+        <p><span>最后更新:</span>2016年09月28日 - 23时27分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/24/Angular学习笔记01-概述/" title="Angular学习笔记01-概述">http://yoursite.com/2016/09/24/Angular学习笔记01-概述/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/24/Angular学习笔记01-概述/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" title="Javascript里判断一个对象是否拥有某属性">http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -319,18 +297,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/09/27/Angular学习笔记02-自定义指令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Angular学习笔记02-自定义指令
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/19/Mac命令笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac命令</div>
+    <a href="/2016/09/28/Javascript里判断一个元素是否存在于数组中/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript里判断一个元素是否存在于数组中</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -341,7 +310,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#判断JS对象是否拥有某属性"><span class="toc-number">1.</span> <span class="toc-text">判断JS对象是否拥有某属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#in-运算符"><span class="toc-number">1.1.</span> <span class="toc-text">in 运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hasOwnProperty-方法"><span class="toc-number">1.2.</span> <span class="toc-text">hasOwnProperty 方法</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -377,7 +346,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/24/Angular学习笔记01-概述/" data-title="Angular学习笔记01-概述" data-url="http://yoursite.com/2016/09/24/Angular学习笔记01-概述/"></div>
+    <div class="ds-thread" data-thread-key="2016/09/28/Javascript里判断一个对象是否拥有某属性/" data-title="Javascript里判断一个对象是否拥有某属性" data-url="http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -400,13 +369,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/27/Angular学习笔记02-自定义指令/" title="上一篇: Angular学习笔记02-自定义指令">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/19/Mac命令笔记/" title="下一篇: Mac命令">
+            <a href="/2016/09/28/Javascript里判断一个元素是否存在于数组中/" title="下一篇: Javascript里判断一个元素是否存在于数组中">
                 <i class="fa fa-angle-right"></i>
             </a>
         
