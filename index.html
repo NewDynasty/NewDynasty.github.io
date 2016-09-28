@@ -219,7 +219,81 @@
     <article id="post-Angular学习笔记03-ui-grid使用心得" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/28/Angular学习笔记03-ui-grid使用心得/" class="article-date">
+      <a href="/2016/09/29/Angular学习笔记03-ui-grid使用心得/" class="article-date">
+      <time datetime="2016-09-28T16:24:11.000Z" itemprop="datePublished">2016-09-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/29/Angular学习笔记03-ui-grid使用心得/">Angular学习笔记03-ui.grid使用心得</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。</p>
+</blockquote>
+<p>其核心模块有以下功能：</p>
+<ul>
+<li>虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 </li>
+<li>绑定单元格到复杂的属性以及函数</li>
+<li>列排序可用三种状态：顺序，倒序，无排序</li>
+<li>列过滤</li>
+<li>改变列头以及用模板填充单元格的能力</li>
+<li>i18nService 允许标签翻译</li>
+</ul>
+<hr>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Angular学习笔记04-ui-grid使用心得" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/" class="article-date">
       <time datetime="2016-09-28T15:47:06.000Z" itemprop="datePublished">2016-09-28</time>
 </a>
     </div>
@@ -233,7 +307,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/28/Angular学习笔记03-ui-grid使用心得/">Angular学习笔记03-ui.grid使用心得</a>
+      <a class="article-title" href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/">Angular学习笔记04-ui.grid使用心得</a>
     </h1>
   
 
@@ -243,7 +317,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><blockquote>
+<p>UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。</p>
+</blockquote>
+<p>其核心模块有以下功能：</p>
+<ul>
+<li>虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 </li>
+<li>绑定单元格到复杂的属性以及函数</li>
+<li>列排序可用三种状态：顺序，倒序，无排序</li>
+<li>列过滤</li>
+<li>改变列头以及用模板填充单元格的能力</li>
+<li>i18nService 允许标签翻译</li>
+</ul>
+<hr>
+<p>需求是在ui.grid生成的表格上加上这样一个功能：<strong>点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。</strong></p>
+<p>那么目标分成两步：</p>
+<ol>
+<li>首先需要为表格添加行点击监听事件以及触发函数</li>
+<li>其次需要为触发函数实现弹出窗口功能</li>
+</ol>
+<h1 id="为ui-grid添加行点击监听事件以及触发函数"><a href="#为ui-grid添加行点击监听事件以及触发函数" class="headerlink" title="为ui.grid添加行点击监听事件以及触发函数"></a>为ui.grid添加行点击监听事件以及触发函数</h1>
       
     </div>
     
@@ -520,8 +613,6 @@
           
               <h1 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h1><pre><code>封装 angular ui.bootstrap.datepickerPopup组件到指令&lt;datepicker-directive&gt;&lt;/datepicker-directive&gt;
 </code></pre><h2 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块配置文件app.js</div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, [</div><div class="line">  <span class="string">'ui.bootstrap'</span>,</div><div class="line">  <span class="string">'datepicker'</span></div><div class="line">]);</div></pre></td></tr></table></figure>
-<h2 id="需要使用该指令的页面对应的js文件"><a href="#需要使用该指令的页面对应的js文件" class="headerlink" title="需要使用该指令的页面对应的js文件"></a>需要使用该指令的页面对应的js文件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">需要使用该指令的页面对应的js文件</div><div class="line"><span class="comment">// 配置Datepicker参数</span></div><div class="line">$scope.dtConf = &#123;</div><div class="line">    <span class="comment">// 显示在输入框里的日期格式 </span></div><div class="line">    dateFormat: <span class="string">"yyyy-MM-dd"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h2 id="需要使用该指令的页面"><a href="#需要使用该指令的页面" class="headerlink" title="需要使用该指令的页面"></a>需要使用该指令的页面</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">需要使用该指令的页面</div><div class="line"><span class="tag">&lt;<span class="name">datepicker-directive</span> <span class="attr">conf</span>=<span class="string">"dtConf"</span>&gt;</span><span class="tag">&lt;/<span class="name">datepicker-directive</span>&gt;</span></div></pre></td></tr></table></figure>
           
       
     </div>

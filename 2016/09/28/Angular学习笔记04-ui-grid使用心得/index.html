@@ -3,45 +3,42 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Angular学习笔记01-概述 | Dynasty&#39;s blog</title>
+  <title>Angular学习笔记04-ui.grid使用心得 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述angular是一个MVVM框架，有以下特点：
+  <meta name="description" content="概述
+UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。
 
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
+其核心模块有以下功能：
 
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
+虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 
+绑定单元格到复杂的属性以及函数
+列排序可用三种状态：顺序，倒序，无排序
+列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular学习笔记01-概述">
-<meta property="og:url" content="http://yoursite.com/2016/09/24/Angular学习笔记01-概述/index.html">
+<meta property="og:title" content="Angular学习笔记04-ui.grid使用心得">
+<meta property="og:url" content="http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="概述angular是一个MVVM框架，有以下特点：
+<meta property="og:description" content="概述
+UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。
 
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
+其核心模块有以下功能：
 
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
-<meta property="og:updated_time" content="2016-09-27T13:43:23.000Z">
+虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 
+绑定单元格到复杂的属性以及函数
+列排序可用三种状态：顺序，倒序，无排序
+列">
+<meta property="og:updated_time" content="2016-09-28T16:23:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular学习笔记01-概述">
-<meta name="twitter:description" content="概述angular是一个MVVM框架，有以下特点：
+<meta name="twitter:title" content="Angular学习笔记04-ui.grid使用心得">
+<meta name="twitter:description" content="概述
+UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。
 
-双向数据绑定
-依赖注入
-声明式UI
-可扩展的自定义指令、服务以及过滤器
-路由管理
+其核心模块有以下功能：
 
-
-如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作">
+虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 
+绑定单元格到复杂的属性以及函数
+列排序可用三种状态：顺序，倒序，无排序
+列">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -239,11 +236,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Angular学习笔记01-概述" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Angular学习笔记04-ui-grid使用心得" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/24/Angular学习笔记01-概述/" class="article-date">
-      <time datetime="2016-09-24T08:02:30.000Z" itemprop="datePublished">2016-09-24</time>
+      <a href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/" class="article-date">
+      <time datetime="2016-09-28T15:47:06.000Z" itemprop="datePublished">2016-09-28</time>
 </a>
     </div>
   
@@ -256,7 +253,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Angular学习笔记01-概述
+      Angular学习笔记04-ui.grid使用心得
     </h1>
   
 
@@ -281,18 +278,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>angular是一个MVVM框架，有以下特点：</p>
-<ul>
-<li>双向数据绑定</li>
-<li>依赖注入</li>
-<li>声明式UI</li>
-<li>可扩展的自定义指令、服务以及过滤器</li>
-<li>路由管理</li>
-</ul>
-<blockquote>
-<p>如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作我有这样一个DOM，我想让它做XX，新一代前端开发思维 以AngularJS为代表 以Data为中心 聚焦于数据的变更 MVW = Model + View + WhatEver。</p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><blockquote>
+<p>UI-Grid 3.0 (前身是 ng-grid), 是一个只依赖于Angular的UI组件. 它以核心数据表格模块以及像angular模块和指令一样的功能来设计。这使得其内核小巧且仅在你需要它执行非常复杂的功能时才会专注。</p>
 </blockquote>
-
+<p>其核心模块有以下功能：</p>
+<ul>
+<li>虚拟化的行和列 - 只有当行和列能在单元格看到时才是真正地呈现 </li>
+<li>绑定单元格到复杂的属性以及函数</li>
+<li>列排序可用三种状态：顺序，倒序，无排序</li>
+<li>列过滤</li>
+<li>改变列头以及用模板填充单元格的能力</li>
+<li>i18nService 允许标签翻译</li>
+</ul>
+<hr>
+<p>需求是在ui.grid生成的表格上加上这样一个功能：<strong>点击每一行会弹出显示该行数据对应对象的隐藏属性（表格里默认只显示一部分）。</strong></p>
+<p>那么目标分成两步：</p>
+<ol>
+<li>首先需要为表格添加行点击监听事件以及触发函数</li>
+<li>其次需要为触发函数实现弹出窗口功能</li>
+</ol>
+<h1 id="为ui-grid添加行点击监听事件以及触发函数"><a href="#为ui-grid添加行点击监听事件以及触发函数" class="headerlink" title="为ui.grid添加行点击监听事件以及触发函数"></a>为ui.grid添加行点击监听事件以及触发函数</h1>
       
     </div>
     
@@ -300,13 +305,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/24/Angular学习笔记01-概述/">Angular学习笔记01-概述</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/">Angular学习笔记04-ui.grid使用心得</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年09月24日 - 16时02分</p>
-        <p><span>最后更新:</span>2016年09月27日 - 21时43分</p>
+        <p><span>发布时间:</span>2016年09月28日 - 23时47分</p>
+        <p><span>最后更新:</span>2016年09月29日 - 00时23分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/24/Angular学习笔记01-概述/" title="Angular学习笔记01-概述">http://yoursite.com/2016/09/24/Angular学习笔记01-概述/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/24/Angular学习笔记01-概述/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/" title="Angular学习笔记04-ui.grid使用心得">http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -319,18 +324,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/09/27/Angular学习笔记02-自定义指令/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/09/29/Angular学习笔记03-ui-grid使用心得/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Angular学习笔记02-自定义指令
+          Angular学习笔记03-ui.grid使用心得
         
       </div>
     </a>
   
   
-    <a href="/2016/09/19/Mac命令笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac命令</div>
+    <a href="/2016/09/28/ssh-keygen的使用方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">转载_ssh-keygen的使用方法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -341,7 +346,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为ui-grid添加行点击监听事件以及触发函数"><span class="toc-number">2.</span> <span class="toc-text">为ui.grid添加行点击监听事件以及触发函数</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -377,7 +382,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/24/Angular学习笔记01-概述/" data-title="Angular学习笔记01-概述" data-url="http://yoursite.com/2016/09/24/Angular学习笔记01-概述/"></div>
+    <div class="ds-thread" data-thread-key="2016/09/28/Angular学习笔记04-ui-grid使用心得/" data-title="Angular学习笔记04-ui.grid使用心得" data-url="http://yoursite.com/2016/09/28/Angular学习笔记04-ui-grid使用心得/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -400,13 +405,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/27/Angular学习笔记02-自定义指令/" title="上一篇: Angular学习笔记02-自定义指令">
+            <a href="/2016/09/29/Angular学习笔记03-ui-grid使用心得/" title="上一篇: Angular学习笔记03-ui.grid使用心得">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/19/Mac命令笔记/" title="下一篇: Mac命令">
+            <a href="/2016/09/28/ssh-keygen的使用方法/" title="下一篇: 转载_ssh-keygen的使用方法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
