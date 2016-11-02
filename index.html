@@ -136,7 +136,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
+                        <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
                     </div>
                 </section>
                 
@@ -335,6 +335,76 @@
       
         <p class="article-more-link">
           <a  href="/2016/11/02/使用ssh公钥实现免密码登录/#more">more&gt;&gt; >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-XML的特殊字符" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/02/XML的特殊字符/" class="article-date">
+      <time datetime="2016-11-02T10:54:18.000Z" itemprop="datePublished">2016-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/02/XML的特殊字符/">转载-XML的特殊字符</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <blockquote>
+<p>转载自中国凉茶:<a href="http://hechuanzhen.iteye.com/blog/1739062/"> XML的特殊字符</a></p>
+</blockquote>
+<p>XML中共有5个特殊的字符，分别是：&amp;&lt;&gt;“’。如果配置文件中的注入值包括这些特殊字符，就需要进行特别处理。</p>
+<p>有两种解决方法：<br>其一，采用本例中的&lt;![CDATA[ ]]&gt;特殊标签，将包含特殊字符的字符串封装起来；<br>其二，使用XML转义序列表示这些特殊的字符，这5个特殊字符所对应XML转义序列在下表中说明： </p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/XML/">XML</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XML/">XML</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/11/02/XML的特殊字符/#more">more&gt;&gt; >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -830,78 +900,6 @@
         <p class="article-more-link">
           <a  href="/2016/09/27/Angular学习笔记02-自定义指令/#more">more&gt;&gt; >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Angular学习笔记01-概述" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/09/24/Angular学习笔记01-概述/" class="article-date">
-      <time datetime="2016-09-24T08:02:30.000Z" itemprop="datePublished">2016-09-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/24/Angular学习笔记01-概述/">Angular学习笔记01-概述</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>angular是一个MVVM框架，有以下特点：</p>
-<ul>
-<li>双向数据绑定</li>
-<li>依赖注入</li>
-<li>声明式UI</li>
-<li>可扩展的自定义指令、服务以及过滤器</li>
-<li>路由管理</li>
-</ul>
-<blockquote>
-<p>如果你之前使用的是jQuery，那么你应该记住在AngularJS中应该使用声明式的方法而非命令式的方法。如果你尝试走jQuery的老路，那么你注定会在AngularJS中失败。传统前端开发思维：以JQuery为代表以DOM为中心关注VIEW层的变化和用户操作我有这样一个DOM，我想让它做XX，新一代前端开发思维 以AngularJS为代表 以Data为中心 聚焦于数据的变更 MVW = Model + View + WhatEver。</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>
