@@ -136,7 +136,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a>
+                        <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
                     </div>
                 </section>
                 
@@ -215,6 +215,73 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Mac命令笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/19/Mac命令笔记/" class="article-date">
+      <time datetime="2016-09-19T08:02:30.000Z" itemprop="datePublished">2016-09-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/19/Mac命令笔记/">Mac命令</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="1-查看指定端口被什么进程占用"><a href="#1-查看指定端口被什么进程占用" class="headerlink" title="1.查看指定端口被什么进程占用"></a>1.查看指定端口被什么进程占用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">lsof -i :6377</div><div class="line">COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME</div><div class="line">redis-ser 10186 dynasty    4u  IPv6 0xc2d949d2<span class="built_in">fc</span>8eee11      0t0  TCP *:6377 (LISTEN)</div><div class="line">redis-ser 10186 dynasty    5u  IPv4 0xc2d949d2<span class="built_in">fc</span>259881      0t0  TCP *:6377 (LISTEN)</div></pre></td></tr></table></figure>
+<p>然后使用kill pid命令关闭指定进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">kill</span> 10186</div></pre></td></tr></table></figure></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Mac/">Mac</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/09/19/Mac命令笔记/#more">more&gt;&gt; >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Mac上终端用户名显示bogon的解决办法" class="article article-type-post" itemscope itemprop="blogPost">
   
