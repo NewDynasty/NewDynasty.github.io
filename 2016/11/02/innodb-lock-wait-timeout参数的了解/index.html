@@ -3,36 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>转载_ssh-keygen的使用方法 | Dynasty&#39;s blog</title>
+  <title>innodb_lock_wait_timeout参数的了解 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载自kongqz: 判断JS对象是否拥有某属性
-
-概述
-就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作
-模型分析假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机
-
-要达到的目的：A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。">
+  <meta name="description" content="在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；
+1、innodb_lock_wait_timeout的参数说明
+innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转载_ssh-keygen的使用方法">
-<meta property="og:url" content="http://yoursite.com/2016/09/28/ssh-keygen的使用方法/index.html">
+<meta property="og:title" content="innodb_lock_wait_timeout参数的了解">
+<meta property="og:url" content="http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="转载自kongqz: 判断JS对象是否拥有某属性
-
-概述
-就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作
-模型分析假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机
-
-要达到的目的：A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。">
-<meta property="og:updated_time" content="2016-09-28T15:46:14.000Z">
+<meta property="og:description" content="在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；
+1、innodb_lock_wait_timeout的参数说明
+innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分">
+<meta property="og:image" content="http://p1.bqimg.com/4851/ed91c521efcc2287.png">
+<meta property="og:updated_time" content="2016-11-02T11:36:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="转载_ssh-keygen的使用方法">
-<meta name="twitter:description" content="转载自kongqz: 判断JS对象是否拥有某属性
-
-概述
-就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作
-模型分析假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机
-
-要达到的目的：A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。">
+<meta name="twitter:title" content="innodb_lock_wait_timeout参数的了解">
+<meta name="twitter:description" content="在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；
+1、innodb_lock_wait_timeout的参数说明
+innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分">
+<meta name="twitter:image" content="http://p1.bqimg.com/4851/ed91c521efcc2287.png">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -230,11 +220,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ssh-keygen的使用方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-innodb-lock-wait-timeout参数的了解" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/28/ssh-keygen的使用方法/" class="article-date">
-      <time datetime="2016-09-28T15:32:59.000Z" itemprop="datePublished">2016-09-28</time>
+      <a href="/2016/11/02/innodb-lock-wait-timeout参数的了解/" class="article-date">
+      <time datetime="2016-11-02T11:13:23.000Z" itemprop="datePublished">2016-11-02</time>
 </a>
     </div>
   
@@ -247,7 +237,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      转载_ssh-keygen的使用方法
+      innodb_lock_wait_timeout参数的了解
     </h1>
   
 
@@ -256,13 +246,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -272,37 +262,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>转载自kongqz:<a href="http://blog.csdn.net/kongqz/article/details/6338690" target="_blank" rel="external"> 判断JS对象是否拥有某属性</a></p>
-</blockquote>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ol>
-<li>就是为了让两个linux机器之间使用ssh不需要用户名和密码，采用了数字签名RSA或者DSA来完成这个操作</li>
-<li>模型分析<br>假设 A（192.168.20.59）为客户机器，B（192.168.20.60）为目标机</li>
-</ol>
-<p>要达到的目的：<br>A 机器ssh登录 B 机器无需输入密码，加密方式选 rsa|dsa均可以，默认dsa。</p>
-<a id="more"></a>
-<h1 id="具体操作流程"><a href="#具体操作流程" class="headerlink" title="具体操作流程"></a>具体操作流程</h1><p>单向登陆的操作过程：</p>
-<ol>
-<li>登录 A 机器 </li>
-<li>ssh-keygen -t [rsa|dsa]，将会生成密钥文件和私钥文件 id_rsa，id_rsa.pub或id_dsa，id_dsa.pub</li>
-<li>将 .pub 文件复制到 B 机器的 .ssh 目录， 并 cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys</li>
-<li>大功告成，从 A 机器登录 B 机器的目标账户，不再需要密码了（直接运行 #ssh 192.168.20.60 ）</li>
-</ol>
-<p>双向登陆的操作过程：</p>
-<ol>
-<li>ssh-keygen做密码验证可以使在向对方机器上ssh，scp不用使用密码。具体方法如下:</li>
-<li>两个节点都执行操作：#ssh-keygen -t rsa<br>然后全部回车，采用默认值.</li>
-<li>这样生成了一对密钥，存放在用户目录的~/.ssh下。<br>将公钥考到对方机器的用户目录下 ，并将其复制到~/.ssh/authorized_keys中（操作命令：#cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys ）。</li>
-<li>设置文件和目录权限：设置authorized_keys权限<br>$ chmod 600 authorized_keys<br>设置.ssh目录权限<br>$ chmod 700 -R .ssh</li>
-<li>要保证.ssh和authorized_keys都只有用户自己有写权限。否则验证无效。（今天就是遇到这个问题，找了好久问题所在）其实仔细想想，这样做是为了不会出现系统漏洞。<br>我从20.60去访问20.59的时候会提示如下错误：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">The authenticity of host <span class="string">'192.168.20.59 (192.168.20.59)'</span> can<span class="string">'t be established.  </span></div><div class="line">RSA key fingerprint is 6a:37:c0:e1:09:a4:29:8d:68:d0:ca:21:20:94:be:18.  </div><div class="line">Are you sure you want to continue connecting (yes/no)? yes  </div><div class="line">Warning: Permanently added '192.168.20.59<span class="string">' (RSA) to the list of known hosts.  </span></div><div class="line">root@192.168.20.59's password:   </div><div class="line">Permission denied, please try again.  </div><div class="line">root@192.168.20.59<span class="string">'s password:   </span></div><div class="line">Permission denied, please try again.  </div><div class="line">root@192.168.20.59's password:   </div><div class="line">Permission denied (publickey,gssapi-with-mic,password).</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="总结注意事项"><a href="#总结注意事项" class="headerlink" title="总结注意事项"></a>总结注意事项</h1><ol>
-<li>文件和目录的权限千万别设置成chmod 777，这个权限太大了，不安全，数字签名也不支持。</li>
-<li>生成的rsa/dsa签名的公钥是给对方机器使用的。这个公钥内容还要拷贝到authorized_keys</li>
-<li>linux之间的访问直接 ssh 机器ip</li>
-<li>某个机器生成自己的RSA或者DSA的数字签名，将公钥给目标机器，然后目标机器接收后设定相关权限（公钥和authorized_keys权限），这个目标机就能被生成数字签名的机器无密码访问了</li>
-</ol>
+        <p>在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；</p>
+<h3 id="1、innodb-lock-wait-timeout的参数说明"><a href="#1、innodb-lock-wait-timeout的参数说明" class="headerlink" title="1、innodb_lock_wait_timeout的参数说明"></a>1、innodb_lock_wait_timeout的参数说明</h3><p><img src="http://p1.bqimg.com/4851/ed91c521efcc2287.png" alt=""></p>
+<p>innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分配到资源则会返回应用失败；<br>参数的时间单位是秒，最小可设置为1s(一般不会设置得这么小)，最大可设置1073741824秒（34年，一条语句锁等待超过30分钟估计业务该有反馈了）<br>默认安装时这个值是50s(公司的默认参数设置)</p>
+<h3 id="2、参数的修改"><a href="#2、参数的修改" class="headerlink" title="2、参数的修改"></a>2、参数的修改</h3><p>参数支持范围为Session和Global，且支持动态修改，所以可以通过两种方法修改；</p>
+<h5 id="2-1-通过语句修改"><a href="#2-1-通过语句修改" class="headerlink" title="2.1 通过语句修改"></a>2.1 通过语句修改</h5><p>set innodb_lock_wait_timeout=100;<br>set global innodb_lock_wait_timeout=100;<br>注意global的修改对当前线程是不生效的，只有建立新的连接才生效</p>
+<h5 id="2-2-修改参数文件-etc-my-cnf"><a href="#2-2-修改参数文件-etc-my-cnf" class="headerlink" title="2.2 修改参数文件/etc/my.cnf"></a>2.2 修改参数文件/etc/my.cnf</h5><p>innodb_lock_wait_timeout = 50</p>
+<h3 id="3、当等待超过阀值时的情况"><a href="#3、当等待超过阀值时的情况" class="headerlink" title="3、当等待超过阀值时的情况"></a>3、当等待超过阀值时的情况</h3><p>当锁等待超过设置时间的时候，就会报如下的错误；<br>ERROR 1205 (HY000): Lock wait timeout exceeded; try restarting transaction<br>总结：本文档只是对MySQL锁等待的相关参数做一个简单的了解，后续会有整理相关锁等待及管理的文档；</p>
+<p>本文作者：JOHN，某上市公司DBA，业余时间专注于数据库的技术管理，从管理的角度去运用技术。<br>ORACLE技术博客：ORACLE 猎人笔记               数据库技术群：367875324 （请备注ORACLE管理 ） </p>
 
       
     </div>
@@ -311,13 +278,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/28/ssh-keygen的使用方法/">转载_ssh-keygen的使用方法</a></p>
+        <p><span>本文标题:</span><a href="/2016/11/02/innodb-lock-wait-timeout参数的了解/">innodb_lock_wait_timeout参数的了解</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年09月28日 - 23时32分</p>
-        <p><span>最后更新:</span>2016年09月28日 - 23时46分</p>
+        <p><span>发布时间:</span>2016年11月02日 - 19时13分</p>
+        <p><span>最后更新:</span>2016年11月02日 - 19时36分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/28/ssh-keygen的使用方法/" title="转载_ssh-keygen的使用方法">http://yoursite.com/2016/09/28/ssh-keygen的使用方法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/28/ssh-keygen的使用方法/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/02/innodb-lock-wait-timeout参数的了解/" title="innodb_lock_wait_timeout参数的了解">http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -330,18 +297,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Angular学习笔记04-ui.grid使用心得
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">转载_Javascript里判断一个对象是否拥有某属性</div>
+    <a href="/2016/10/03/function-和-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">~function(){}() 和(function(){}){}</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -352,7 +310,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#具体操作流程"><span class="toc-number">2.</span> <span class="toc-text">具体操作流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结注意事项"><span class="toc-number">3.</span> <span class="toc-text">总结注意事项</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、innodb-lock-wait-timeout的参数说明"><span class="toc-number">1.</span> <span class="toc-text">1、innodb_lock_wait_timeout的参数说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、参数的修改"><span class="toc-number">2.</span> <span class="toc-text">2、参数的修改</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-通过语句修改"><span class="toc-number">2.0.1.</span> <span class="toc-text">2.1 通过语句修改</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-修改参数文件-etc-my-cnf"><span class="toc-number">2.0.2.</span> <span class="toc-text">2.2 修改参数文件/etc/my.cnf</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、当等待超过阀值时的情况"><span class="toc-number">3.</span> <span class="toc-text">3、当等待超过阀值时的情况</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -388,7 +346,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/28/ssh-keygen的使用方法/" data-title="转载_ssh-keygen的使用方法" data-url="http://yoursite.com/2016/09/28/ssh-keygen的使用方法/"></div>
+    <div class="ds-thread" data-thread-key="2016/11/02/innodb-lock-wait-timeout参数的了解/" data-title="innodb_lock_wait_timeout参数的了解" data-url="http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -411,13 +369,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/" title="上一篇: Angular学习笔记04-ui.grid使用心得">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" title="下一篇: 转载_Javascript里判断一个对象是否拥有某属性">
+            <a href="/2016/10/03/function-和-function/" title="下一篇: ~function(){}() 和(function(){}){}">
                 <i class="fa fa-angle-right"></i>
             </a>
         
