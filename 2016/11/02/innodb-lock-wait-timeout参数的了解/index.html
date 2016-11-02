@@ -6,22 +6,19 @@
   <title>innodb_lock_wait_timeout参数的了解 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；
-1、innodb_lock_wait_timeout的参数说明
-innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分">
+1、innodb_lock_wait_timeout的参数说明">
 <meta property="og:type" content="article">
 <meta property="og:title" content="innodb_lock_wait_timeout参数的了解">
 <meta property="og:url" content="http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
 <meta property="og:description" content="在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；
-1、innodb_lock_wait_timeout的参数说明
-innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分">
+1、innodb_lock_wait_timeout的参数说明">
 <meta property="og:image" content="http://p1.bqimg.com/4851/ed91c521efcc2287.png">
-<meta property="og:updated_time" content="2016-11-02T11:36:55.000Z">
+<meta property="og:updated_time" content="2016-11-02T11:43:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="innodb_lock_wait_timeout参数的了解">
 <meta name="twitter:description" content="在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；
-1、innodb_lock_wait_timeout的参数说明
-innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分">
+1、innodb_lock_wait_timeout的参数说明">
 <meta name="twitter:image" content="http://p1.bqimg.com/4851/ed91c521efcc2287.png">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
@@ -264,6 +261,7 @@ innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间�
           
         <p>在管理ORACLE的工作中，经常发现因为锁等待的原因导致应用宕机了。Mysql考虑到自身的性能和架构等因素，InnoDB数据库引擎增加了参数innodb_lock_wait_timeout，避免在资源有限的情况下产生太多的锁等待；</p>
 <h3 id="1、innodb-lock-wait-timeout的参数说明"><a href="#1、innodb-lock-wait-timeout的参数说明" class="headerlink" title="1、innodb_lock_wait_timeout的参数说明"></a>1、innodb_lock_wait_timeout的参数说明</h3><p><img src="http://p1.bqimg.com/4851/ed91c521efcc2287.png" alt=""></p>
+<a id="more"></a>
 <p>innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间，超过这个时间还未分配到资源则会返回应用失败；<br>参数的时间单位是秒，最小可设置为1s(一般不会设置得这么小)，最大可设置1073741824秒（34年，一条语句锁等待超过30分钟估计业务该有反馈了）<br>默认安装时这个值是50s(公司的默认参数设置)</p>
 <h3 id="2、参数的修改"><a href="#2、参数的修改" class="headerlink" title="2、参数的修改"></a>2、参数的修改</h3><p>参数支持范围为Session和Global，且支持动态修改，所以可以通过两种方法修改；</p>
 <h5 id="2-1-通过语句修改"><a href="#2-1-通过语句修改" class="headerlink" title="2.1 通过语句修改"></a>2.1 通过语句修改</h5><p>set innodb_lock_wait_timeout=100;<br>set global innodb_lock_wait_timeout=100;<br>注意global的修改对当前线程是不生效的，只有建立新的连接才生效</p>
@@ -281,7 +279,7 @@ innodb_lock_wait_timeout指的是事务等待获取资源等待的最长时间�
         <p><span>本文标题:</span><a href="/2016/11/02/innodb-lock-wait-timeout参数的了解/">innodb_lock_wait_timeout参数的了解</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
         <p><span>发布时间:</span>2016年11月02日 - 19时13分</p>
-        <p><span>最后更新:</span>2016年11月02日 - 19时36分</p>
+        <p><span>最后更新:</span>2016年11月02日 - 19时43分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/02/innodb-lock-wait-timeout参数的了解/" title="innodb_lock_wait_timeout参数的了解">http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/11/02/innodb-lock-wait-timeout参数的了解/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
