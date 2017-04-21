@@ -136,7 +136,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Original/" style="font-size: 20px;">Original</a> <a href="/tags/Server/" style="font-size: 12.5px;">Server</a> <a href="/tags/Terminal/" style="font-size: 12.5px;">Terminal</a> <a href="/tags/Tomcat/" style="font-size: 12.5px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a>
+                        <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Original/" style="font-size: 20px;">Original</a> <a href="/tags/Server/" style="font-size: 12.5px;">Server</a> <a href="/tags/Terminal/" style="font-size: 12.5px;">Terminal</a> <a href="/tags/Tomcat/" style="font-size: 12.5px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a>
                     </div>
                 </section>
                 
@@ -722,6 +722,68 @@
       
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/SQL/">SQL</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-关于在MySQL中实现upsert操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/23/关于在MySQL中实现upsert操作/" class="article-date">
+      <time datetime="2016-07-22T20:54:00.000Z" itemprop="datePublished">2016-07-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/23/关于在MySQL中实现upsert操作/">关于在MySQL中实现upsert操作</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>该操作的实现原理是通过判断插入的记录里是否存在主键冲突来决定是插入还是更新，当出现主键冲突时则进行更新操作（使用 ON DUPLICATE KEY UPDATE 语句后面的参数），若无冲突则进行插入操作。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> t_pro_gift</div><div class="line">        ( _id, </div><div class="line">        <span class="keyword">name</span>,</div><div class="line">        age )</div><div class="line"><span class="keyword">VALUES</span> </div><div class="line">        ( <span class="number">1</span>,</div><div class="line">        <span class="string">'hello'</span>,</div><div class="line">        <span class="number">24</span> )</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DUPLICATE</span> <span class="keyword">KEY</span> <span class="keyword">UPDATE</span></div><div class="line">        <span class="keyword">id</span> = <span class="number">1</span>,</div><div class="line">        <span class="keyword">name</span> = <span class="string">'world'</span>,</div><div class="line">        age = <span class="number">55</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
     </div>
 
 

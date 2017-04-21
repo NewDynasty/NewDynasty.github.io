@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>基于SQL语句的断码查询 | Dynasty&#39;s blog</title>
+  <title>关于在MySQL中实现upsert操作 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="假设表名叫record，并且有一个字段名为NO，数据类型必须是整数或是字符串。
-123456789SELECT *, (endNO-startNO) AS diff FROM (    SELECT startNO, (SELECT MIN(NO)-1 FROM record WHERE NO&amp;gt;startNO) AS endNO        FROM (            SELECT">
+  <meta name="description" content="该操作的实现原理是通过判断插入的记录里是否存在主键冲突来决定是插入还是更新，当出现主键冲突时则进行更新操作（使用 ON DUPLICATE KEY UPDATE 语句后面的参数），若无冲突则进行插入操作。
+123456789101112INSERT INTO t_pro_gift        ( _id,         name,        age )VALUES         ( 1,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于SQL语句的断码查询">
-<meta property="og:url" content="http://yoursite.com/2016/07/23/基于SQL语句的断码查询/index.html">
+<meta property="og:title" content="关于在MySQL中实现upsert操作">
+<meta property="og:url" content="http://yoursite.com/2016/07/23/关于在MySQL中实现upsert操作/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="假设表名叫record，并且有一个字段名为NO，数据类型必须是整数或是字符串。
-123456789SELECT *, (endNO-startNO) AS diff FROM (    SELECT startNO, (SELECT MIN(NO)-1 FROM record WHERE NO&amp;gt;startNO) AS endNO        FROM (            SELECT">
-<meta property="og:updated_time" content="2017-04-21T16:21:18.000Z">
+<meta property="og:description" content="该操作的实现原理是通过判断插入的记录里是否存在主键冲突来决定是插入还是更新，当出现主键冲突时则进行更新操作（使用 ON DUPLICATE KEY UPDATE 语句后面的参数），若无冲突则进行插入操作。
+123456789101112INSERT INTO t_pro_gift        ( _id,         name,        age )VALUES         ( 1,">
+<meta property="og:updated_time" content="2017-04-21T16:27:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于SQL语句的断码查询">
-<meta name="twitter:description" content="假设表名叫record，并且有一个字段名为NO，数据类型必须是整数或是字符串。
-123456789SELECT *, (endNO-startNO) AS diff FROM (    SELECT startNO, (SELECT MIN(NO)-1 FROM record WHERE NO&amp;gt;startNO) AS endNO        FROM (            SELECT">
+<meta name="twitter:title" content="关于在MySQL中实现upsert操作">
+<meta name="twitter:description" content="该操作的实现原理是通过判断插入的记录里是否存在主键冲突来决定是插入还是更新，当出现主键冲突时则进行更新操作（使用 ON DUPLICATE KEY UPDATE 语句后面的参数），若无冲突则进行插入操作。
+123456789101112INSERT INTO t_pro_gift        ( _id,         name,        age )VALUES         ( 1,">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -215,11 +215,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-基于SQL语句的断码查询" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于在MySQL中实现upsert操作" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/23/基于SQL语句的断码查询/" class="article-date">
-      <time datetime="2016-07-22T21:28:00.000Z" itemprop="datePublished">2016-07-23</time>
+      <a href="/2016/07/23/关于在MySQL中实现upsert操作/" class="article-date">
+      <time datetime="2016-07-22T20:54:00.000Z" itemprop="datePublished">2016-07-23</time>
 </a>
     </div>
   
@@ -232,7 +232,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      基于SQL语句的断码查询
+      关于在MySQL中实现upsert操作
     </h1>
   
 
@@ -241,7 +241,7 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/SQL/">SQL</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
     </div>
 
 
@@ -257,8 +257,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>假设表名叫record，并且有一个字段名为NO，数据类型必须是整数或是字符串。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *, (endNO-startNO) <span class="keyword">AS</span> diff <span class="keyword">FROM</span> (</div><div class="line">    <span class="keyword">SELECT</span> startNO, (<span class="keyword">SELECT</span> <span class="keyword">MIN</span>(<span class="keyword">NO</span>)<span class="number">-1</span> <span class="keyword">FROM</span> <span class="built_in">record</span> <span class="keyword">WHERE</span> <span class="keyword">NO</span>&gt;startNO) <span class="keyword">AS</span> endNO</div><div class="line">        <span class="keyword">FROM</span> (</div><div class="line">            <span class="keyword">SELECT</span> <span class="keyword">NO</span>+<span class="number">1</span> <span class="keyword">AS</span> startNO <span class="keyword">FROM</span> <span class="built_in">record</span> </div><div class="line">            <span class="keyword">WHERE</span></div><div class="line">                <span class="keyword">NO</span>+<span class="number">1</span> <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> <span class="keyword">NO</span> <span class="keyword">FROM</span> <span class="built_in">record</span>)</div><div class="line">                <span class="keyword">AND</span> <span class="keyword">NO</span> &lt;(<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(<span class="keyword">NO</span>) <span class="keyword">FROM</span> <span class="built_in">record</span>)</div><div class="line">        ) <span class="keyword">AS</span> maxnum</div><div class="line">) <span class="keyword">AS</span> consistency</div></pre></td></tr></table></figure>
+        <p>该操作的实现原理是通过判断插入的记录里是否存在主键冲突来决定是插入还是更新，当出现主键冲突时则进行更新操作（使用 ON DUPLICATE KEY UPDATE 语句后面的参数），若无冲突则进行插入操作。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> t_pro_gift</div><div class="line">        ( _id, </div><div class="line">        <span class="keyword">name</span>,</div><div class="line">        age )</div><div class="line"><span class="keyword">VALUES</span> </div><div class="line">        ( <span class="number">1</span>,</div><div class="line">        <span class="string">'hello'</span>,</div><div class="line">        <span class="number">24</span> )</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DUPLICATE</span> <span class="keyword">KEY</span> <span class="keyword">UPDATE</span></div><div class="line">        <span class="keyword">id</span> = <span class="number">1</span>,</div><div class="line">        <span class="keyword">name</span> = <span class="string">'world'</span>,</div><div class="line">        age = <span class="number">55</span></div></pre></td></tr></table></figure>
       
     </div>
     
@@ -266,13 +266,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/23/基于SQL语句的断码查询/">基于SQL语句的断码查询</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/23/关于在MySQL中实现upsert操作/">关于在MySQL中实现upsert操作</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年07月23日 - 05时28分</p>
-        <p><span>最后更新:</span>2017年04月22日 - 00时21分</p>
+        <p><span>发布时间:</span>2016年07月23日 - 04时54分</p>
+        <p><span>最后更新:</span>2017年04月22日 - 00时27分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/23/基于SQL语句的断码查询/" title="基于SQL语句的断码查询">http://yoursite.com/2016/07/23/基于SQL语句的断码查询/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/23/基于SQL语句的断码查询/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/23/关于在MySQL中实现upsert操作/" title="关于在MySQL中实现upsert操作">http://yoursite.com/2016/07/23/关于在MySQL中实现upsert操作/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/23/关于在MySQL中实现upsert操作/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -285,20 +285,15 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/07/26/如何让指定的项目成为tomcat的默认项目/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/07/23/基于SQL语句的断码查询/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          如何让指定的项目成为tomcat的默认项目
+          基于SQL语句的断码查询
         
       </div>
     </a>
   
-  
-    <a href="/2016/07/23/关于在MySQL中实现upsert操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于在MySQL中实现upsert操作</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -343,7 +338,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/07/23/基于SQL语句的断码查询/" data-title="基于SQL语句的断码查询" data-url="http://yoursite.com/2016/07/23/基于SQL语句的断码查询/"></div>
+    <div class="ds-thread" data-thread-key="2016/07/23/关于在MySQL中实现upsert操作/" data-title="关于在MySQL中实现upsert操作" data-url="http://yoursite.com/2016/07/23/关于在MySQL中实现upsert操作/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -366,15 +361,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/26/如何让指定的项目成为tomcat的默认项目/" title="上一篇: 如何让指定的项目成为tomcat的默认项目">
+            <a href="/2016/07/23/基于SQL语句的断码查询/" title="上一篇: 基于SQL语句的断码查询">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/07/23/关于在MySQL中实现upsert操作/" title="下一篇: 关于在MySQL中实现upsert操作">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/jquery的$().each,$.each的区别/">转载 - jquery的$().each和$.each的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/innodb-lock-wait-timeout参数的了解/">innodb_lock_wait_timeout参数的了解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/使用ssh公钥实现免密码登录/">转载 - 使用ssh公钥实现免密码登录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/XML的特殊字符/">转载 - XML的特殊字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/03/function-和-function/">转载 - '~function(){}() 和(function(){}){}'</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/29/Angular学习笔记03-ui-grid使用心得/">Angular学习笔记03-ui.grid使用心得</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/">Angular学习笔记04-ui.grid使用心得</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/ssh-keygen的使用方法/">转载 - ssh-keygen的使用方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/">转载 - Javascript里判断一个对象是否拥有某属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/Javascript里判断一个元素是否存在于数组中/">转载 - Javascript里判断一个元素是否存在于数组中</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/27/Angular学习笔记02-自定义指令/">Angular学习笔记02-自定义指令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/Angular学习笔记01-概述/">Angular学习笔记01-概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/19/Mac命令笔记/">Mac命令笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/">Mac终端用户名显示bogon的解决办法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/demo/">Hexo Demo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/搭建服务器环境心得windows 2008 server + tomcat7 + mysql5/">搭建服务器环境心得windows 2008 server + tomcat7 + mysql5</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/如何让指定的项目成为tomcat的默认项目/">如何让指定的项目成为tomcat的默认项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/基于SQL语句的断码查询/">基于SQL语句的断码查询</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/关于在MySQL中实现upsert操作/">关于在MySQL中实现upsert操作</a></li></ul>
