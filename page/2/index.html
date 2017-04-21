@@ -136,7 +136,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Original/" style="font-size: 20px;">Original</a> <a href="/tags/Server/" style="font-size: 10px;">Server</a> <a href="/tags/Terminal/" style="font-size: 10px;">Terminal</a> <a href="/tags/Terminal-Original/" style="font-size: 10px;">Terminal Original</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a>
+                        <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Original/" style="font-size: 20px;">Original</a> <a href="/tags/Server/" style="font-size: 10px;">Server</a> <a href="/tags/Terminal/" style="font-size: 12.5px;">Terminal</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a>
                     </div>
                 </section>
                 
@@ -465,7 +465,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terminal-Original/">Terminal Original</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Original/">Original</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terminal/">Terminal</a></li></ul>
     </div>
 
       
@@ -502,7 +502,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/17/demo/">demo</a>
+      <a class="article-title" href="/2016/09/17/demo/">Hexo Demo</a>
     </h1>
   
 
@@ -522,7 +522,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/demo/">demo</a>
+    <a class="article-category-link" href="/categories/Demo/">Demo</a>
     </div>
 
 
@@ -579,13 +579,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>大姑娘上轿头一回，以前从来没弄过运维这块的东西，正好目前上手的项目就我一个人，咬咬牙上了。当时情况是客户买好了域名以及服务器然后交给我让我全部包办了。</p>
+              <p>大姑娘上轿头一回，以前从来没弄过运维这块的东西，正好目前上手的项目就我一个人，咬咬牙上了。当时情况是客户买好了域名以及服务器然后交给我让我全部包办了。</p>
 <p>首先是通过windows自带的远程访问（本机环境是windows10）控制服务器（如下图），填写对应的IP（有的需要带上端口号）以及用户名密码，注意：如果需要像操作虚拟机那样传输文件操作目标主机则需要勾上本地资源选项卡——详细信息——驱动器，你需要哪个磁盘就勾上哪个磁盘</p>
-<p><img src="/images/20160726013542855.png" alt=""></p>
-<p>然后就像操作自己电脑一样安装各种软件环境：jdk、tomcat、MySQL等等<br>需要什么文件就从自己电脑复制进去，或者可以使用ftp文件传输的方式传送文件，有windows自带的IIS下的ftp服务器，或是自己搭建一个（filezilla server，miniFTP都是很轻量的软件）</p>
-<p>之后配置jdk环境变量，tomcat环境变量，修改8080端口到80端口，修改默认项目，把已经打好包的项目war包放进tomcat目录下的webapps文件夹下（不需要解压）。现在就可以开始在本地测试项目能否正常运行了。</p>
-<p>服务器本地环境搭建完毕后就可以把域名绑定到服务器的IP上了，在域名后台管理界面里把域名绑定的IP改为服务器的IP即可，改完可以ping 对应的域名，当可以ping通以后就可以在浏览器里访问了。注意：若服务器本地测试正常而外网不能访问的话有可能是防火墙的问题，需要在防火墙——高级设置——入站规则里添加放行的端口（如80端口）</p>
-
+          
       
     </div>
     
@@ -602,6 +598,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Original/">Original</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tomcat/">Tomcat</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/07/26/搭建服务器环境心得windows 2008 server + tomcat7 + mysql5/#more">more&gt;&gt; >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
