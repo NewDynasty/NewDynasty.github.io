@@ -133,7 +133,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Original/" style="font-size: 20px;">Original</a> <a href="/tags/Server/" style="font-size: 12.5px;">Server</a> <a href="/tags/Terminal/" style="font-size: 12.5px;">Terminal</a> <a href="/tags/Tomcat/" style="font-size: 12.5px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a>
+                        <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Original/" style="font-size: 20px;">Original</a> <a href="/tags/Server/" style="font-size: 12.5px;">Server</a> <a href="/tags/Terminal/" style="font-size: 12.5px;">Terminal</a> <a href="/tags/Tomcat/" style="font-size: 12.5px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a>
                     </div>
                 </section>
                 
@@ -351,6 +351,27 @@
             a.data('title', title).removeAttr('title').hover(
 
             function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>() {
                 var offset = a.offset();
                 $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
                     top: offset.top - a.outerHeight() - 15,
