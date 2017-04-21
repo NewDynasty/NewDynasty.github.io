@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/26/如何让指定的项目成为tomcat的默认项目/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
 <meta property="og:description" content="即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目假设我有一个项目名为test，在其中映射了/login路径若没有该默认项目则需要这样访问：http://localhost:8080/test/login当你修改了默认项目后则变成了：http://localhost:8080/login">
-<meta property="og:updated_time" content="2017-04-21T15:36:00.000Z">
+<meta property="og:updated_time" content="2017-04-21T15:48:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何让指定的项目成为tomcat的默认项目">
 <meta name="twitter:description" content="即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目假设我有一个项目名为test，在其中映射了/login路径若没有该默认项目则需要这样访问：http://localhost:8080/test/login当你修改了默认项目后则变成了：http://localhost:8080/login">
@@ -257,10 +257,14 @@
         <p>即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目<br>假设我有一个项目名为test，在其中映射了/login路径<br>若没有该默认项目则需要这样访问：<a href="http://localhost:8080/test/login" target="_blank" rel="external">http://localhost:8080/test/login</a><br>当你修改了默认项目后则变成了：<a href="http://localhost:8080/login" target="_blank" rel="external">http://localhost:8080/login</a></p>
 <a id="more"></a>
 <p>具体步骤为：</p>
-<p>找到tomcat目录下conf文件夹里的server.xml<br>在HOST节点里添加CONTEXT节点（若已经有此节点则修改对应属性即可）<br>把path=”*“（星号代表任意内容）改为path=”“（空）即可</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">docBase</span>=<span class="string">"D:\workspace\code\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\clockcm"</span> <span class="attr">path</span>=<span class="string">"/clockcm"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> <span class="attr">source</span>=<span class="string">"org.eclipse.jst.jee.server:clockcm"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li>找到tomcat目录下conf文件夹里的server.xml</li>
+<li>在HOST节点里添加CONTEXT节点（若已经有此节点则修改对应属性即可）</li>
+<li>把path=”*“（星号代表任意内容）改为path=”“（空）即可</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">docBase</span>=<span class="string">"D:\workspace\code\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\clockcm"</span> </span></div><div class="line"><span class="attr">path</span>=<span class="string">"/clockcm"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> <span class="attr">source</span>=<span class="string">"org.eclipse.jst.jee.server:clockcm"</span>/&gt;</div></pre></td></tr></table></figure>
 <p>改为</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">docBase</span>=<span class="string">"D:\workspace\code\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\clockcm"</span> <span class="attr">path</span>=<span class="string">""</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> <span class="attr">source</span>=<span class="string">"org.eclipse.jst.jee.server:clockcm"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">docBase</span>=<span class="string">"D:\workspace\code\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\clockcm"</span> </span></div><div class="line"><span class="attr">path</span>=<span class="string">""</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> <span class="attr">source</span>=<span class="string">"org.eclipse.jst.jee.server:clockcm"</span>/&gt;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -272,7 +276,7 @@
         <p><span>本文标题:</span><a href="/2016/07/26/如何让指定的项目成为tomcat的默认项目/">如何让指定的项目成为tomcat的默认项目</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
         <p><span>发布时间:</span>2016年07月26日 - 01时27分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 23时36分</p>
+        <p><span>最后更新:</span>2017年04月21日 - 23时48分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/26/如何让指定的项目成为tomcat的默认项目/" title="如何让指定的项目成为tomcat的默认项目">http://yoursite.com/2016/07/26/如何让指定的项目成为tomcat的默认项目/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/26/如何让指定的项目成为tomcat的默认项目/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
