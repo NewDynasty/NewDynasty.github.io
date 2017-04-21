@@ -3,21 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>转载 - jquery的$().each和$.each的区别 | Dynasty&#39;s blog</title>
+  <title>转载 - MyBatis的#{}和${}的区别以及order by注入问题 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jquery的$().each和$.each的区别在jquery中，遍历对象和数组，经常会用到$().each和$.each()，两个方法。两个方法是有区别的，从而这两个方法在针对不同的操作上，显示了各自的特点。$().each,对于这个方法，在dom处理上面用的较多。
-如果页面有多个input标签类型为checkbox，对于这时用$().each来处理多个checkbook，例如：1234567">
+  <meta name="description" content="转载自蓝萝卜blu:mybatis的#{}和${}的区别以及order by注入问题
+
+前言略,直奔主题..
+ #{}相当于jdbc中的preparedstatement
+${}是输出变量的值
+你可能说不明所以,不要紧我们看2段代码:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转载 - jquery的$().each和$.each的区别">
-<meta property="og:url" content="http://yoursite.com/2016/12/15/jquery的$().each,$.each的区别/index.html">
+<meta property="og:title" content="转载 - MyBatis的#{}和${}的区别以及order by注入问题">
+<meta property="og:url" content="http://yoursite.com/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="jquery的$().each和$.each的区别在jquery中，遍历对象和数组，经常会用到$().each和$.each()，两个方法。两个方法是有区别的，从而这两个方法在针对不同的操作上，显示了各自的特点。$().each,对于这个方法，在dom处理上面用的较多。
-如果页面有多个input标签类型为checkbox，对于这时用$().each来处理多个checkbook，例如：1234567">
-<meta property="og:updated_time" content="2017-04-21T15:27:05.000Z">
+<meta property="og:description" content="转载自蓝萝卜blu:mybatis的#{}和${}的区别以及order by注入问题
+
+前言略,直奔主题..
+ #{}相当于jdbc中的preparedstatement
+${}是输出变量的值
+你可能说不明所以,不要紧我们看2段代码:">
+<meta property="og:updated_time" content="2017-04-21T16:42:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="转载 - jquery的$().each和$.each的区别">
-<meta name="twitter:description" content="jquery的$().each和$.each的区别在jquery中，遍历对象和数组，经常会用到$().each和$.each()，两个方法。两个方法是有区别的，从而这两个方法在针对不同的操作上，显示了各自的特点。$().each,对于这个方法，在dom处理上面用的较多。
-如果页面有多个input标签类型为checkbox，对于这时用$().each来处理多个checkbook，例如：1234567">
+<meta name="twitter:title" content="转载 - MyBatis的#{}和${}的区别以及order by注入问题">
+<meta name="twitter:description" content="转载自蓝萝卜blu:mybatis的#{}和${}的区别以及order by注入问题
+
+前言略,直奔主题..
+ #{}相当于jdbc中的preparedstatement
+${}是输出变量的值
+你可能说不明所以,不要紧我们看2段代码:">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -215,11 +227,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-jquery的$().each,$.each的区别" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-MyBatis的#{}和${}的区别以及order by注入问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/15/jquery的$().each,$.each的区别/" class="article-date">
-      <time datetime="2016-12-15T02:32:59.000Z" itemprop="datePublished">2016-12-15</time>
+      <a href="/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/" class="article-date">
+      <time datetime="2016-07-08T02:25:00.000Z" itemprop="datePublished">2016-07-08</time>
 </a>
     </div>
   
@@ -232,7 +244,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      转载 - jquery的$().each和$.each的区别
+      转载 - MyBatis的#{}和${}的区别以及order by注入问题
     </h1>
   
 
@@ -241,13 +253,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
+    <a class="article-category-link" href="/categories/MyBatis/">MyBatis</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MyBatis/">MyBatis</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,24 +269,43 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="jquery的-each和-each的区别"><a href="#jquery的-each和-each的区别" class="headerlink" title="jquery的$().each和$.each的区别"></a>jquery的$().each和$.each的区别</h1><p>在jquery中，遍历对象和数组，经常会用到$().each和$.each()，两个方法。两个方法是有区别的，从而这两个方法在针对不同的操作上，显示了各自的特点。<br>$().each,对于这个方法，在dom处理上面用的较多。</p>
-<p>如果页面有多个input标签类型为checkbox，对于这时用$().each来处理多个checkbook，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"input[name='ch']"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">'checked'</span>) == <span class="literal">true</span>) &#123;</div><div class="line">    <span class="comment">//一些操作代码</span></div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 回调函数是可以传递参数，i就为遍历的索引。</span></div></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>转载自蓝萝卜blu:<a href="http://www.cnblogs.com/chyu/p/4389701.html" target="_blank" rel="external">mybatis的#{}和${}的区别以及order by注入问题</a></p>
+</blockquote>
+<p>前言略,直奔主题..</p>
+<p> #{}相当于jdbc中的preparedstatement</p>
+<p>${}是输出变量的值</p>
+<p>你可能说不明所以,不要紧我们看2段代码:</p>
 <a id="more"></a>
-<p>对于遍历一个数组，用$.each()来处理，简直爽到了极点。例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [&#123;<span class="string">"name"</span>:<span class="string">"limeng"</span>,<span class="string">"email"</span>:<span class="string">"limeng@123.com"</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"hehe"</span>,<span class="string">"email"</span>:<span class="string">"456@123.com"</span>&#125;];</div><div class="line"></div><div class="line">$.each(array ,<span class="function"><span class="keyword">function</span>(<span class="params">i,n</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"索引:"</span>+i, <span class="string">"对应值为："</span>+n.name);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 参数i为遍历索引值，n为当前的遍历对象.</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr1 = [ <span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>, <span class="string">"four"</span>, <span class="string">"five"</span> ];</div><div class="line">$.each(arr1, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 输出：one  two  three  four  five</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr2 = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]]</div><div class="line">$.each(arr2, <span class="function"><span class="keyword">function</span>(<span class="params">i, item</span>) </span>&#123;</div><div class="line">    alert(item[<span class="number">0</span>]);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 输出：1  4  7</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123; one:<span class="number">1</span>, two:<span class="number">2</span>, three:<span class="number">3</span>, four:<span class="number">4</span>, five:<span class="number">5</span> &#125;;</div><div class="line">$.each(obj, <span class="function"><span class="keyword">function</span>(<span class="params">key, val</span>) </span>&#123;</div><div class="line">    alert(obj[key]);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 输出：1  2  3  4  5</span></div></pre></td></tr></table></figure>
-<p>在jQuery里有一个each方法，用起来非常的爽，不用再像原来那样写for循环，jQuery源码里自己也有很多用到each方法。</p>
-<p>其实jQuery里的each方法是通过js里的call方法来实现的。</p>
-<p>下面简单介绍一下call方法。<br>call这个方法很奇妙，其实官方的说明是：”调用一个对象的一个方法，以另一个对象替换当前对象。”网上更多的解释是变换上下文环境，也有说是改变上下文this指针。<br>call([thisObj[,arg1[, arg2[,  [,.argN]]]]])</p>
-<p>参数<br>thisObj<br>可选项。将被用作当前对象的对象。<br>arg1, arg2, … argN<br>可选项。将被传递方法参数序列。</p>
-<p>说明<br>call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。</p>
-<p>引用网上有一个很经典的例子</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    alert(a+b);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sub</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    alert(a-b);</div><div class="line">&#125;</div><div class="line">add.call(sub, <span class="number">3</span>, <span class="number">1</span>);</div></pre></td></tr></table></figure>
-<p>用 add 来替换 sub，add.call(sub,3,1) == add(3,1) ，所以运行结果为：alert(4);<br>注意：js 中的函数其实是对象，函数名是对 Function 对象的引用。</p>
-<p>具体call更深入的就不在这里提了。</p>
-<p>下面提一下jQuery的each方法的几种常用的用法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ <span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>, <span class="string">"four"</span>];</div><div class="line">$.each(arr, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//上面这个each输出的结果分别为：one,two,three,four</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [[<span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">6</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">20</span>, <span class="number">9</span>]]</div><div class="line">$.each(arr1, <span class="function"><span class="keyword">function</span>(<span class="params">i, item</span>) </span>&#123;</div><div class="line">    alert(item[<span class="number">0</span>]);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 其实arr1为一个二维数组，item相当于取每一个一维数组，</span></div><div class="line"><span class="comment">// item[0]相对于取每一个一维数组里的第一个值</span></div><div class="line"><span class="comment">// 所以上面这个each输出分别为：1   4   7</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123; one:<span class="number">1</span>, two:<span class="number">2</span>, three:<span class="number">3</span>, four:<span class="number">4</span>&#125;;</div><div class="line">$.each(obj, <span class="function"><span class="keyword">function</span>(<span class="params">key, val</span>) </span>&#123;</div><div class="line">    alert(obj[key]);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 这个each就有更厉害了，能循环每一个属性</span></div><div class="line"><span class="comment">// 输出结果为：1   2  3  4</span></div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">String sql = <span class="string">"select * from admin_domain_location order by ?"</span>;</div><div class="line">PreparedStatement st = con.prepareStatement(sql);</div><div class="line">st.setString(<span class="number">1</span>, <span class="string">"domain_id"</span>);</div><div class="line">System.out.println(st.toString());</div><div class="line"></div><div class="line">ResultSet rs = st.executeQuery();</div><div class="line"><span class="keyword">while</span>(rs.next()) &#123;</div><div class="line">    System.out.println(rs.getString(<span class="string">"domain_id"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">com.mysql.jdbc.PreparedStatement@<span class="number">1f</span>a1ba1: select * from admin_domain_location order by <span class="string">'domain_id'</span></div></pre></td></tr></table></figure>
+<p>3<br>4<br>5<br>2<br>6</p>
+<p>这是个jdbc的preparedstatement例子,不要吐槽我这么写是否合法,这里只是为了说明问题.</p>
+<p>以上例子有得出以下信息:</p>
+<p>1)order by后面如果采用预编译的形式动态输入参数,那么实际插入的参数是一个字符串,例子中是:order by ‘domain_id’</p>
+<p>2)输出结果并没有排序,从sql语句中的形式我们也可以推测出此sql语句根本也不合法(正常应该是 order by domain_id)</p>
+<p>修改以上代码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">String input = <span class="string">"domain_id"</span>;</div><div class="line">String sql = <span class="string">"select * from admin_domain_location order by "</span>+input;</div><div class="line">PreparedStatement st = con.prepareStatement(sql);</div><div class="line">System.out.println(st.toString());</div><div class="line">ResultSet rs = st.executeQuery();</div><div class="line"></div><div class="line"><span class="keyword">while</span>(rs.next())&#123;</div><div class="line">    System.out.println(rs.getString(<span class="string">"domain_id"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">com.mysql.jdbc.PreparedStatement@<span class="number">1f</span>a1ba1: select * from admin_domain_location order by domain_id</div></pre></td></tr></table></figure>
+<p>2<br>3<br>4<br>5<br>6</p>
+<p>此次我们直接把一个变量的值拼接sql语句,从结果可以看出来:</p>
+<p>1)sql语句拼接正常</p>
+<p>2)查询结果排序正常</p>
+<p>你可能要问这和#{}与${}有什么关系..</p>
+<p>上面已经说过#{}相当于jdbc的preparedstatement,所以以上的第一个例子就相当于#{},那么第二个例子就自然而然指的是${}的情况.</p>
+<p>你可能说思维还是有些凌乱,不要紧我们来看第三个例子:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">String sql = <span class="string">"select * from admin_domain_location where domain_id=?"</span>;</div><div class="line">PreparedStatement st = con.prepareStatement(sql);</div><div class="line">st.setString(<span class="number">1</span>, <span class="string">"2"</span>);</div><div class="line">System.out.println(st.toString());</div><div class="line">ResultSet rs = st.executeQuery();</div><div class="line"></div><div class="line"><span class="keyword">while</span>(rs.next())&#123;</div><div class="line">    System.out.println(rs.getString(<span class="string">"domain_id"</span>));</div><div class="line">&#125;</div><div class="line">＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div><div class="line">String input = <span class="string">"2"</span>;</div><div class="line">String sql = <span class="string">"select * from admin_domain_location where domain_id='"</span>+input+<span class="string">"'"</span>;</div><div class="line">PreparedStatement st = con.prepareStatement(sql);</div><div class="line">System.out.println(st.toString());</div><div class="line">ResultSet rs = st.executeQuery();</div><div class="line"></div><div class="line"><span class="keyword">while</span>(rs.next())&#123;</div><div class="line">    System.out.println(rs.getString(<span class="string">"domain_id"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出结果都为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">com.mysql.jdbc.PreparedStatement@<span class="number">12</span>bf560: select * from admin_domain_location where domain_id=<span class="string">'2'</span></div></pre></td></tr></table></figure></p>
+<p>2</p>
+<p>这第三个例子说的是#{}和${}通用的问题,也就是说在此种情况下#{}和${}是通用的,只不过需要些小的转换.如例子中需要手动</p>
+<p>拼接单引号 ‘ ‘ 到变量值的前后,确保sql语句正常.</p>
+<p>简单说#{}是经过预编译的,是安全的,而${}是未经过预编译的,仅仅是取变量的值,是非安全的,存在sql注入.</p>
+<p>这里先说一下只能${}的情况,从我们前面的例子中也能看出,order by是肯定只能用${}了,用#{}会多个’ ‘导致sql语句失效.此外还有一个like 语句后也需要用${},简单想一下</p>
+<p>就能明白.由于${}仅仅是简单的取值,所以以前sql注入的方法适用此处,如果我们order by语句后用了${},那么不做任何处理的时候是存在sql注入危险的.你说怎么防止,那我只</p>
+<p>能悲惨的告诉你,你得手动处理过滤一下输入的内容,如判断一下输入的参数的长度是否正常(注入语句一般很长),更精确的过滤则可以查询一下输入的参数是否在预期的参数集合中..</p>
+
       
     </div>
     
@@ -282,13 +313,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/15/jquery的$().each,$.each的区别/">转载 - jquery的$().each和$.each的区别</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/">转载 - MyBatis的#{}和${}的区别以及order by注入问题</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年12月15日 - 10时32分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 23时27分</p>
+        <p><span>发布时间:</span>2016年07月08日 - 10时25分</p>
+        <p><span>最后更新:</span>2017年04月22日 - 00时42分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/15/jquery的$().each,$.each的区别/" title="转载 - jquery的$().each和$.each的区别">http://yoursite.com/2016/12/15/jquery的$().each,$.each的区别/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/15/jquery的$().each,$.each的区别/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/" title="转载 - MyBatis的#{}和${}的区别以及order by注入问题">http://yoursite.com/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -301,11 +332,15 @@
 
 <nav id="article-nav">
   
-  
-    <a href="/2016/11/02/innodb-lock-wait-timeout参数的了解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">innodb_lock_wait_timeout参数的了解</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2016/07/23/关于在MySQL中实现upsert操作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          关于在MySQL中实现upsert操作
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -314,7 +349,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jquery的-each和-each的区别"><span class="toc-number">1.</span> <span class="toc-text">jquery的$().each和$.each的区别</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -350,7 +385,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/12/15/jquery的$().each,$.each的区别/" data-title="转载 - jquery的$().each和$.each的区别" data-url="http://yoursite.com/2016/12/15/jquery的$().each,$.each的区别/"></div>
+    <div class="ds-thread" data-thread-key="2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/" data-title="转载 - MyBatis的#{}和${}的区别以及order by注入问题" data-url="http://yoursite.com/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -373,13 +408,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/07/23/关于在MySQL中实现upsert操作/" title="上一篇: 关于在MySQL中实现upsert操作">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/11/02/innodb-lock-wait-timeout参数的了解/" title="下一篇: innodb_lock_wait_timeout参数的了解">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/jquery的$().each,$.each的区别/">转载 - jquery的$().each和$.each的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/innodb-lock-wait-timeout参数的了解/">innodb_lock_wait_timeout参数的了解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/使用ssh公钥实现免密码登录/">转载 - 使用ssh公钥实现免密码登录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/XML的特殊字符/">转载 - XML的特殊字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/03/function-和-function/">转载 - '~function(){}() 和(function(){}){}'</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/29/Angular学习笔记03-ui-grid使用心得/">Angular学习笔记03-ui.grid使用心得</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/Angular学习笔记04-ui-grid使用心得/">Angular学习笔记04-ui.grid使用心得</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/ssh-keygen的使用方法/">转载 - ssh-keygen的使用方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/">转载 - Javascript里判断一个对象是否拥有某属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/Javascript里判断一个元素是否存在于数组中/">转载 - Javascript里判断一个元素是否存在于数组中</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/27/Angular学习笔记02-自定义指令/">Angular学习笔记02-自定义指令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/Angular学习笔记01-概述/">Angular学习笔记01-概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/19/Mac命令笔记/">Mac命令笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/Mac上终端用户名显示bogon的解决办法/">Mac终端用户名显示bogon的解决办法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/17/demo/">Hexo Demo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/搭建服务器环境心得windows 2008 server + tomcat7 + mysql5/">搭建服务器环境心得windows 2008 server + tomcat7 + mysql5</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/如何让指定的项目成为tomcat的默认项目/">如何让指定的项目成为tomcat的默认项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/基于SQL语句的断码查询/">基于SQL语句的断码查询</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/关于在MySQL中实现upsert操作/">关于在MySQL中实现upsert操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/MyBatis的#{}和${}的区别以及order by注入问题/">转载 - MyBatis的#{}和${}的区别以及order by注入问题</a></li></ul>
