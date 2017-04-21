@@ -3,30 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>转载 - Javascript里判断一个对象是否拥有某属性 | Dynasty&#39;s blog</title>
+  <title>如何让指定的项目成为tomcat的默认项目 | Dynasty&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载自Snandy: 判断JS对象是否拥有某属性
-
-判断JS对象是否拥有某属性两种方式，但稍有区别
-in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;name&apos; in obj); // truealert(&apos;toString&apos; in obj); // true
-可看到无论是name，还是原形链上的toString，都能检测到返回true。">
+  <meta name="description" content="即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目假设我有一个项目名为test，在其中映射了/login路径若没有该默认项目则需要这样访问：http://localhost:8080/test/login当你修改了默认项目后则变成了：http://localhost:8080/login">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转载 - Javascript里判断一个对象是否拥有某属性">
-<meta property="og:url" content="http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/index.html">
+<meta property="og:title" content="如何让指定的项目成为tomcat的默认项目">
+<meta property="og:url" content="http://yoursite.com/2017/04/21/如何让指定的项目成为tomcat的默认项目/index.html">
 <meta property="og:site_name" content="Dynasty's blog">
-<meta property="og:description" content="转载自Snandy: 判断JS对象是否拥有某属性
-
-判断JS对象是否拥有某属性两种方式，但稍有区别
-in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;name&apos; in obj); // truealert(&apos;toString&apos; in obj); // true
-可看到无论是name，还是原形链上的toString，都能检测到返回true。">
-<meta property="og:updated_time" content="2017-04-21T15:26:40.000Z">
+<meta property="og:description" content="即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目假设我有一个项目名为test，在其中映射了/login路径若没有该默认项目则需要这样访问：http://localhost:8080/test/login当你修改了默认项目后则变成了：http://localhost:8080/login">
+<meta property="og:updated_time" content="2017-04-21T15:33:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="转载 - Javascript里判断一个对象是否拥有某属性">
-<meta name="twitter:description" content="转载自Snandy: 判断JS对象是否拥有某属性
-
-判断JS对象是否拥有某属性两种方式，但稍有区别
-in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;name&apos; in obj); // truealert(&apos;toString&apos; in obj); // true
-可看到无论是name，还是原形链上的toString，都能检测到返回true。">
+<meta name="twitter:title" content="如何让指定的项目成为tomcat的默认项目">
+<meta name="twitter:description" content="即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目假设我有一个项目名为test，在其中映射了/login路径若没有该默认项目则需要这样访问：http://localhost:8080/test/login当你修改了默认项目后则变成了：http://localhost:8080/login">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -224,11 +212,11 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Javascript里判断一个对象是否拥有某属性" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-如何让指定的项目成为tomcat的默认项目" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" class="article-date">
-      <time datetime="2016-09-28T15:18:07.000Z" itemprop="datePublished">2016-09-28</time>
+      <a href="/2017/04/21/如何让指定的项目成为tomcat的默认项目/" class="article-date">
+      <time datetime="2017-04-21T15:32:05.000Z" itemprop="datePublished">2017-04-21</time>
 </a>
     </div>
   
@@ -241,7 +229,7 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
         
   
     <h1 class="article-title" itemprop="name">
-      转载 - Javascript里判断一个对象是否拥有某属性
+      如何让指定的项目成为tomcat的默认项目
     </h1>
   
 
@@ -250,13 +238,13 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
+    <a class="article-category-link" href="/categories/Deployment/">Deployment</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server-Tomcat-Original/">Server Tomcat Original</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -266,17 +254,12 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>转载自Snandy:<a href="http://www.cnblogs.com/snandy/archive/2011/03/04/1970162.html" target="_blank" rel="external"> 判断JS对象是否拥有某属性</a></p>
-</blockquote>
-<h1 id="判断JS对象是否拥有某属性"><a href="#判断JS对象是否拥有某属性" class="headerlink" title="判断JS对象是否拥有某属性"></a>判断JS对象是否拥有某属性</h1><p>两种方式，但稍有区别</p>
-<h2 id="in-运算符"><a href="#in-运算符" class="headerlink" title="in 运算符"></a>in 运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;name:<span class="string">'jack'</span>&#125;;</div><div class="line">alert(<span class="string">'name'</span> <span class="keyword">in</span> obj); <span class="comment">// true</span></div><div class="line">alert(<span class="string">'toString'</span> <span class="keyword">in</span> obj); <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<p>可看到无论是name，还是原形链上的toString，都能检测到返回true。</p>
+        <p>即当你输入你的主机IP的时候不需要再带上项目名即可访问你的项目<br>假设我有一个项目名为test，在其中映射了/login路径<br>若没有该默认项目则需要这样访问：<a href="http://localhost:8080/test/login" target="_blank" rel="external">http://localhost:8080/test/login</a><br>当你修改了默认项目后则变成了：<a href="http://localhost:8080/login" target="_blank" rel="external">http://localhost:8080/login</a></p>
 <a id="more"></a>
-<h2 id="hasOwnProperty-方法"><a href="#hasOwnProperty-方法" class="headerlink" title="hasOwnProperty 方法"></a>hasOwnProperty 方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;name:<span class="string">'jack'</span>&#125;;</div><div class="line">    alert(obj.hasOwnProperty(<span class="string">'name'</span>)); <span class="comment">// --&gt; true</span></div><div class="line">    alert(obj.hasOwnProperty(<span class="string">'toString'</span>)); <span class="comment">// --&gt; false</span></div></pre></td></tr></table></figure>
-<p>原型链上继承过来的属性无法通过hasOwnProperty检测到，返回false。</p>
-<p>需注意的是，虽然in能检测到原型链的属性，但for in通常却不行。</p>
-<p>当然重写原型后for in在IE9/Firefox/Safari/Chrome/Opera下是可见的。</p>
+<p>具体步骤为：</p>
+<p>找到tomcat目录下conf文件夹里的server.xml<br>在HOST节点里添加CONTEXT节点（若已经有此节点则修改对应属性即可）<br>把path=”*“（星号代表任意内容）改为path=”“（空）即可<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">docBase</span>=<span class="string">"D:\workspace\code\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\clockcm"</span> <span class="attr">path</span>=<span class="string">"/clockcm"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> <span class="attr">source</span>=<span class="string">"org.eclipse.jst.jee.server:clockcm"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p>改为</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">docBase</span>=<span class="string">"D:\workspace\code\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\clockcm"</span> <span class="attr">path</span>=<span class="string">""</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> <span class="attr">source</span>=<span class="string">"org.eclipse.jst.jee.server:clockcm"</span>/&gt;</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -285,13 +268,13 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/">转载 - Javascript里判断一个对象是否拥有某属性</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/21/如何让指定的项目成为tomcat的默认项目/">如何让指定的项目成为tomcat的默认项目</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
-        <p><span>发布时间:</span>2016年09月28日 - 23时18分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 23时26分</p>
+        <p><span>发布时间:</span>2017年04月21日 - 23时32分</p>
+        <p><span>最后更新:</span>2017年04月21日 - 23时33分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/28/Javascript里判断一个对象是否拥有某属性/" title="转载 - Javascript里判断一个对象是否拥有某属性">http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/21/如何让指定的项目成为tomcat的默认项目/" title="如何让指定的项目成为tomcat的默认项目">http://yoursite.com/2017/04/21/如何让指定的项目成为tomcat的默认项目/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/如何让指定的项目成为tomcat的默认项目/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -304,18 +287,9 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
 
 <nav id="article-nav">
   
-    <a href="/2016/09/28/ssh-keygen的使用方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          转载 - ssh-keygen的使用方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/28/Javascript里判断一个元素是否存在于数组中/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">转载 - Javascript里判断一个元素是否存在于数组中</div>
+    <a href="/2016/12/15/jquery的$().each,$.each的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">转载 - jquery的$().each和$.each的区别</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -326,7 +300,7 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#判断JS对象是否拥有某属性"><span class="toc-number">1.</span> <span class="toc-text">判断JS对象是否拥有某属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#in-运算符"><span class="toc-number">1.1.</span> <span class="toc-text">in 运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hasOwnProperty-方法"><span class="toc-number">1.2.</span> <span class="toc-text">hasOwnProperty 方法</span></a></li></ol></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -362,7 +336,7 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/28/Javascript里判断一个对象是否拥有某属性/" data-title="转载 - Javascript里判断一个对象是否拥有某属性" data-url="http://yoursite.com/2016/09/28/Javascript里判断一个对象是否拥有某属性/"></div>
+    <div class="ds-thread" data-thread-key="2017/04/21/如何让指定的项目成为tomcat的默认项目/" data-title="如何让指定的项目成为tomcat的默认项目" data-url="http://yoursite.com/2017/04/21/如何让指定的项目成为tomcat的默认项目/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -385,13 +359,11 @@ in 运算符123var obj = &amp;#123;name:&apos;jack&apos;&amp;#125;;alert(&apos;n
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/28/ssh-keygen的使用方法/" title="上一篇: 转载 - ssh-keygen的使用方法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/28/Javascript里判断一个元素是否存在于数组中/" title="下一篇: 转载 - Javascript里判断一个元素是否存在于数组中">
+            <a href="/2016/12/15/jquery的$().each,$.each的区别/" title="下一篇: 转载 - jquery的$().each和$.each的区别">
                 <i class="fa fa-angle-right"></i>
             </a>
         
