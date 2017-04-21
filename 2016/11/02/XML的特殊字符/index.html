@@ -17,13 +17,15 @@ XML中共有5个特殊的字符，分别是：&amp;amp;&amp;lt;&amp;gt;“’。
 
 XML中共有5个特殊的字符，分别是：&amp;amp;&amp;lt;&amp;gt;“’。如果配置文件中的注入值包括这些特殊字符，就需要进行特别处理。
 有两种解决方法：其一，采用本例中的&amp;lt;![CDATA[ ]]&amp;gt;特殊标签，将包含特殊字符的字符串封装起来；其二，使用XML转义序列表示这些特殊的字符，这5个特殊字符所对应XML转义序列在下表中说明：">
-<meta property="og:updated_time" content="2017-04-21T14:39:21.000Z">
+<meta property="og:image" content="http://yoursite.com/images/d8d61b82-d546-368a-83c1-6bfefa060b04.jpg">
+<meta property="og:updated_time" content="2017-04-21T15:40:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转载 - XML的特殊字符">
 <meta name="twitter:description" content="转载自中国凉茶: XML的特殊字符
 
 XML中共有5个特殊的字符，分别是：&amp;amp;&amp;lt;&amp;gt;“’。如果配置文件中的注入值包括这些特殊字符，就需要进行特别处理。
 有两种解决方法：其一，采用本例中的&amp;lt;![CDATA[ ]]&amp;gt;特殊标签，将包含特殊字符的字符串封装起来；其二，使用XML转义序列表示这些特殊的字符，这5个特殊字符所对应XML转义序列在下表中说明：">
+<meta name="twitter:image" content="http://yoursite.com/images/d8d61b82-d546-368a-83c1-6bfefa060b04.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Dynasty&#39;s blog" type="application/atom+xml">
   
@@ -269,24 +271,10 @@ XML中共有5个特殊的字符，分别是：&amp;amp;&amp;lt;&amp;gt;“’。
 <p>XML中共有5个特殊的字符，分别是：&amp;&lt;&gt;“’。如果配置文件中的注入值包括这些特殊字符，就需要进行特别处理。</p>
 <p>有两种解决方法：<br>其一，采用本例中的&lt;![CDATA[ ]]&gt;特殊标签，将包含特殊字符的字符串封装起来；<br>其二，使用XML转义序列表示这些特殊的字符，这5个特殊字符所对应XML转义序列在下表中说明： </p>
 <a id="more"></a>
-<table>
-<thead>
-<tr>
-<th>特殊符号</th>
-<th>转义序列 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>    &lt;</td>
-<td><figure class="highlight plain"><figcaption><span>```  </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;   | ``` &amp;gt;</div></pre></td></tr></table></figure></td>
-</tr>
-</tbody>
-</table>
-<pre><code>&amp;   | <figure class="highlight plain"><figcaption><span>```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;   | ``` &amp;quot;</div></pre></td></tr></table></figure>
-
-&apos;   | <figure class="highlight plain"><figcaption><span>```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Spring在进行XML配置时，如果属性值包含了一个XML的特殊符号，因此我们特意在属性值外添加了一个&lt;![CDATA[ ]]&gt;的XML特殊处理标签，&lt;![CDATA[ ]]&gt;的作用是让XML解析器将标签中的字符串当作普通的文本对待，以防止某些字符串对XML格式造成破坏。来看一个例子： </div><div class="line"></div><div class="line">```xml</div><div class="line">&lt;bean id=&quot;car&quot; class=&quot;com.baobaotao.attr.Car&quot;&gt;  </div><div class="line">    &lt;property name=&quot;maxSpeed&quot;&gt;  </div><div class="line">        &lt;value&gt;200&lt;/value&gt;  </div><div class="line">    &lt;/property&gt;  </div><div class="line">    &lt;property name=&quot;brand&quot;&gt;①  </div><div class="line">        &lt;value&gt;&lt;![CDATA[红旗&amp;CA72]]&gt;&lt;/value&gt;  </div><div class="line">    &lt;/property&gt;  </div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
-</code></pre><p>如果使用XML转义序列，我们可以使用以下的配置替换代码清单4-10中的配置：<br>XML代码： </p>
+<p><img src="/images/d8d61b82-d546-368a-83c1-6bfefa060b04.jpg" alt=""></p>
+<p>Spring在进行XML配置时，如果属性值包含了一个XML的特殊符号，因此我们特意在属性值外添加了一个&lt;![CDATA[ ]]&gt;的XML特殊处理标签，&lt;![CDATA[ ]]&gt;的作用是让XML解析器将标签中的字符串当作普通的文本对待，以防止某些字符串对XML格式造成破坏。来看一个例子： </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"car"</span> <span class="attr">class</span>=<span class="string">"com.baobaotao.attr.Car"</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxSpeed"</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>200<span class="tag">&lt;/<span class="name">value</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"brand"</span>&gt;</span>①  </div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>&lt;![CDATA[红旗&amp;CA72]]&gt;<span class="tag">&lt;/<span class="name">value</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果使用XML转义序列，我们可以使用以下的配置替换代码清单4-10中的配置：<br>XML代码： </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"brand"</span>&gt;</span><span class="tag">&lt;<span class="name">value</span>&gt;</span>红旗&amp;amp;CA72<span class="tag">&lt;/<span class="name">value</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
@@ -298,7 +286,7 @@ XML中共有5个特殊的字符，分别是：&amp;amp;&amp;lt;&amp;gt;“’。
         <p><span>本文标题:</span><a href="/2016/11/02/XML的特殊字符/">转载 - XML的特殊字符</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 dynasty 的个人博客">dynasty</a></p>
         <p><span>发布时间:</span>2016年11月02日 - 18时54分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 22时39分</p>
+        <p><span>最后更新:</span>2017年04月21日 - 23时40分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/02/XML的特殊字符/" title="转载 - XML的特殊字符">http://yoursite.com/2016/11/02/XML的特殊字符/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/11/02/XML的特殊字符/　　作者: dynasty" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
